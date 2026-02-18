@@ -92,6 +92,15 @@
       "ca": "Actualment sóc Estudiant del Grau en Intel·ligència Artificial a la Universitat Politècnica de Catalunya (UPC), amb una sòlida base en visió per computador i experiència pràctica com a becari a la mateixa institució. Els meus estudis i experiència reflecteixen el meu interès per la innovació tecnològica i l'aplicació de tècniques avançades d'IA. Aspiro a continuar desenvolupant les meves habilitats en el camp de la visió per computador i enfortint la meva programació per contribuir al progrés educatiu i tecnològic.",
       "en": "I am currently an Artificial Intelligence Engineering student at the Universitat Politècnica de Catalunya (UPC), with a strong background in computer vision and practical experience as an intern at the same institution. My studies and practical experience reflect my interest in technological innovation and the application of advanced artificial intelligence techniques. I aspire to continue developing my skills in the field of computer vision and strengthening my programming abilities to contribute to educational and technological progress."
     },
+    "languages": [
+      "Python",
+      "C++",
+      "C",
+      "R",
+      "MATLAB",
+      "SQL",
+      "JavaScript"
+    ],
     "highlights": [
       {
         "title": {
@@ -105,12 +114,12 @@
       },
       {
         "title": {
-          "ca": "Enginyeria IA",
-          "en": "AI Engineering"
+          "ca": "Machine Learning & Deep Learning",
+          "en": "Machine Learning & Deep Learning"
         },
         "desc": {
-          "ca": "Avaluació i optimització de LLMs.",
-          "en": "Evaluation and optimization of Large Language Models."
+          "ca": "Especialitzat en el desenvolupament i optimització de models d'IA avançats.",
+          "en": "Specialized in developing and optimizing advanced AI models."
         }
       },
       {
@@ -139,8 +148,8 @@
         "company": "Universitat Politècnica de Catalunya (UPC)",
         "location": "Barcelona, Catalunya",
         "dates": {
-          "ca": "Setembre 2025 - Desembre 2025",
-          "en": "September 2025 - December 2025"
+          "ca": "Setembre 2025 - Juny 2026",
+          "en": "September 2025 - June 2026"
         },
         "description": [
           {
@@ -446,7 +455,6 @@
       "en": "I'm open to new opportunities. Feel free to reach out."
     },
     "email": "moraladariajaume@gmail.com",
-    "phone": "699 250 931",
     "linkedin": "https://www.linkedin.com/in/jaumemil",
     "github": "https://github.com/",
     "form": {
