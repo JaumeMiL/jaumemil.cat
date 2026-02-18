@@ -196,34 +196,36 @@ h6 {
     background-color: var(--bg-secondary);
 }
 
-/* Navbar */
-.navbar {
+/* Floating Glass Navbar */
+.glass-nav {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: var(--header-height);
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid transparent;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 99px;
+    padding: 0.75rem 2rem;
     z-index: 1000;
-    transition: border-color var(--transition-normal), background-color var(--transition-normal);
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1);
+    transition: all var(--transition-normal);
 }
 
-[data-theme="dark"] .navbar {
-    background-color: rgba(15, 17, 21, 0.8);
+[data-theme="dark"] .glass-nav {
+    background: rgba(15, 17, 21, 0.7);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
 }
 
-.navbar.scrolled {
-    border-bottom-color: var(--border-color);
-}
-
-.navbar-content {
+.nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100%;
+    width: 100%;
 }
 
 .logo {

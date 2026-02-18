@@ -577,9 +577,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                document.querySelector('.navbar').classList.add('scrolled');
+                document.querySelector('.glass-nav').style.padding = '0.5rem 2rem';
+                document.querySelector('.glass-nav').style.background = getComputedStyle(document.documentElement).getPropertyValue('--bg-color') === '#050806' ? 'rgba(15, 17, 21, 0.9)' : 'rgba(255, 255, 255, 0.9)';
             } else {
-                document.querySelector('.navbar').classList.remove('scrolled');
+                document.querySelector('.glass-nav').style.padding = '0.75rem 2rem';
+                document.querySelector('.glass-nav').style.background = '';
             }
         });
     }
