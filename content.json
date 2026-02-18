@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": {
-      "ca": "Jaume Mora i Ladària - Estudiant del Grau en Intel·ligència Artificial",
+      "ca": "Jaume Mora i Ladària",
       "en": "Jaume Mora i Ladària - Artificial Intelligence Student"
     },
     "description": {
@@ -457,6 +457,7 @@
     "email": "moraladariajaume@gmail.com",
     "linkedin": "https://www.linkedin.com/in/jaumemil",
     "github": "https://github.com/JaumeMiL",
+    "formspree_endpoint": "https://formspree.io/f/xzdavkye",
     "form": {
       "name_label": {
         "ca": "Nom",

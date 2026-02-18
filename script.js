@@ -579,19 +579,45 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function handleFormSubmit(e) {
+    async function handleFormSubmit(e) {
         e.preventDefault();
-        const btn = e.target.querySelector('button[type="submit"]');
+        const form = e.target;
+        const btn = form.querySelector('button[type="submit"]');
         const successMsg = document.getElementById('success-message');
+        const formData = new FormData(form);
 
         const originalText = btn.textContent;
         btn.textContent = '...';
         btn.disabled = true;
 
-        setTimeout(() => {
+        try {
+            const response = await fetch(state.data.contact.formspree_endpoint, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                successMsg.style.display = 'block';
+                successMsg.className = 'success-message'; // Ensure correct class
+                successMsg.textContent = state.data.contact.form.success_msg[state.lang];
+                form.reset();
+                btn.style.display = 'none';
+            } else {
+                const data = await response.json();
+                throw new Error(data.error || 'Form submission failed');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
             successMsg.style.display = 'block';
-            btn.style.display = 'none';
-        }, 1000);
+            successMsg.className = 'error-message'; // You might need to add CSS for this
+            successMsg.style.color = 'red';
+            successMsg.textContent = state.lang === 'ca' ? "Hi ha hagut un error. Si us plau, envia'm un correu directament." : "There was an error. Please email me directly.";
+            btn.textContent = originalText;
+            btn.disabled = false;
+        }
     }
 
     // Start
