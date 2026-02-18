@@ -596,6 +596,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.disabled = true;
 
         try {
+            console.log('Sending form to:', state.data.contact.formspree_endpoint);
             const response = await fetch(state.data.contact.formspree_endpoint, {
                 method: 'POST',
                 body: formData,
@@ -604,22 +605,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
+            const data = await response.json();
+
             if (response.ok) {
+                console.log('Form success:', data);
                 successMsg.style.display = 'block';
-                successMsg.className = 'success-message'; // Ensure correct class
+                successMsg.className = 'success-message';
+                successMsg.style.color = '#065f46'; // Reset color
                 successMsg.textContent = state.data.contact.form.success_msg[state.lang];
                 form.reset();
                 btn.style.display = 'none';
             } else {
-                const data = await response.json();
-                throw new Error(data.error || 'Form submission failed');
+                console.error('Form error response:', data);
+                throw new Error(data.error || (data.errors ? data.errors.map(e => e.message).join(', ') : 'Form submission failed'));
             }
         } catch (error) {
             console.error('Error submitting form:', error);
             successMsg.style.display = 'block';
-            successMsg.className = 'error-message'; // You might need to add CSS for this
+            successMsg.className = 'error-message';
             successMsg.style.color = 'red';
-            successMsg.textContent = state.lang === 'ca' ? "Hi ha hagut un error. Si us plau, envia'm un correu directament." : "There was an error. Please email me directly.";
+            // Show more specific error to help debugging
+            const genericError = state.lang === 'ca' ? "Hi ha hagut un error. Si us plau, envia'm un correu directament." : "There was an error. Please email me directly.";
+            successMsg.textContent = `${genericError} (Details: ${error.message})`;
+
             btn.textContent = originalText;
             btn.disabled = false;
         }
