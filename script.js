@@ -163,20 +163,25 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `).join('');
 
+        const langTitle = state.lang === 'ca' ? 'Llenguatges de Programació' : 'Programming Languages';
+        const langCardHtml = `
+            <div class="card reveal">
+                <h3>${langTitle}</h3>
+                <div class="skill-chips">
+                    ${data.languages.map(lang => `<span class="chip">${lang}</span>`).join('')}
+                </div>
+            </div>
+        `;
+
         section.innerHTML = `
             <div class="container">
                 <h2 class="section-title reveal">${data.title[state.lang]}</h2>
                 <div class="about-grid">
                     <div class="about-text reveal">
                         <p class="lead-text" style="text-align: left; margin: 0;">${data.summary[state.lang]}</p>
-                        <div style="margin-top: 2rem; background: var(--bg-secondary); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
-                            <h3 style="font-size: 1.1rem; margin-bottom: 1rem; font-family: var(--font-sans);">${state.lang === 'ca' ? 'Llenguatges de Programació' : 'Programming Languages'}</h3>
-                            <div class="skill-chips">
-                                ${data.languages.map(lang => `<span class="chip" style="background: var(--bg-color);">${lang}</span>`).join('')}
-                            </div>
-                        </div>
                     </div>
                     <div class="highlight-cards">
+                        ${langCardHtml}
                         ${highlightsHtml}
                     </div>
                 </div>
