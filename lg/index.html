@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Jaume Mora i Ladària - AI Engineering Student">
+    <link rel="alternate" hreflang="ca" href="?lang=ca" />
+    <link rel="alternate" hreflang="en" href="?lang=en" />
+    <title>Jaume Mora i Ladària</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+</head>
+
+<body>
+
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <a href="#" class="logo">Jaume</a>
+            <div class="nav-links" id="nav-links">
+                <!-- Links injected by JS -->
+            </div>
+            <div class="nav-controls">
+                <button id="lang-toggle" class="btn-icon" aria-label="Switch Language">EN</button>
+                <button id="theme-toggle" class="btn-icon" aria-label="Toggle Dark Mode">
+                    <span class="icon-sun">☀</span>
+                    <span class="icon-moon">☾</span>
+                </button>
+                <a href="../assets/cv.pdf" download id="cta-download" class="btn btn-primary btn-sm">Download CV</a>
+                <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Sections injected by JS -->
+        <section id="hero" class="hero-section text-center">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-avatar">
+                        <div class="avatar-circle"></div>
+                    </div>
+                    <h1 id="hero-name" class="display-title">Loading...</h1>
+                    <p id="hero-role" class="lead-text">Please enable JavaScript</p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary" id="hero-cta-primary">Contact</a>
+                        <a href="#projects" class="btn btn-secondary" id="hero-cta-secondary">Projects</a>
+                    </div>
+                    <div id="hero-availability" class="availability-badge"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <p id="footer-copyright">&copy; 2026</p>
+            </div>
+            <div class="footer-right">
+                <button id="back-to-top" class="btn-link">Back to top</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Templates for repetitive elements can go here if needed, but we'll generate via JS -->
+
+    <!-- Modal for projects -->
+    <div id="project-modal" class="modal" aria-hidden="true">
+        <div class="modal-overlay" tabindex="-1" data-close="modal"></div>
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" aria-label="Close modal" data-close="modal">&times;</button>
+            <div class="modal-content" id="modal-body">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js?v=lg1"></script>
+</body>
+
+</html>
