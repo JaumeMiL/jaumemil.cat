@@ -246,6 +246,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="projects-grid">
                     ${itemsHtml}
                 </div>
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="${state.data.contact.github}" target="_blank" class="btn btn-primary">
+                        ${data.view_github[state.lang]}
+                    </a>
+                </div>
             </div>
         `;
 
@@ -531,10 +536,7 @@ document.addEventListener('DOMContentLoaded', () => {
             applyTheme(true); // Persist user choice
         });
 
-        // Download CV (Print)
-        elements.ctaDownload.addEventListener('click', () => {
-            window.print();
-        });
+
 
         // Mobile Menu
         elements.mobileMenuBtn.addEventListener('click', () => {

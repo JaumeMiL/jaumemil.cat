@@ -216,6 +216,10 @@
       "ca": "Projectes Destacats",
       "en": "Featured Projects"
     },
+    "view_github": {
+      "ca": "Veure el meu GitHub",
+      "en": "View my GitHub"
+    },
     "items": [
       {
         "id": "proj1",
