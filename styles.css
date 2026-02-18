@@ -1,124 +1,199 @@
 /* CSS Variables & Design System */
 :root {
-    /* Colors - Liquid Glass Theme */
-    --bg-color: #f5f5f7;
-    /* Apple light gray base */
-    --bg-secondary: rgba(255, 255, 255, 0.5);
-
-    --text-color: #1d1d1f;
-    /* Apple text black */
-    --text-muted: #86868b;
-
-    --primary-color: #0071e3;
-    /* Apple Blue */
-    --primary-hover: #0077ed;
-
-    --accent-color: #d4af37;
-    /* Kept gold from previous pref, or maybe switch to a nice gradient */
-
-    --border-color: rgba(255, 255, 255, 0.6);
-
-    /* Glass Cards */
-    --card-bg: rgba(255, 255, 255, 0.6);
-    --card-border: rgba(255, 255, 255, 0.8);
-    --glass-blur: blur(20px);
-
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.1);
+    /* Colors - Light Mode (Forest & Gold Premium - White BG) */
+    --bg-color: #ffffff;
+    /* User requested White */
+    --bg-secondary: #f8fafc;
+    /* Very light slate for subtle contrast */
+    --text-color: #111827;
+    /* Standard Dark Grey/Black (Not Green) */
+    --text-muted: #6b7280;
+    /* Standard Muted Grey */
+    --primary-color: #064e3b;
+    /* Deep Forest Green (Buttons) */
+    --primary-hover: #065f46;
+    --accent-color: #d97706;
+    /* Gold/Mustard */
+    --border-color: #e2e8f0;
+    --card-bg: #ffffff;
+    --shadow-sm: 0 1px 2px 0 rgba(6, 78, 59, 0.05);
+    /* Tinted with green */
+    --shadow-md: 0 4px 6px -1px rgba(6, 78, 59, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(6, 78, 59, 0.1);
 
     /* Typography */
-    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --font-serif: 'Playfair Display', serif;
-    /* Optional, sticking to sans mostly for Apple feel? context kept serif for headings */
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-serif: 'Playfair Display', 'Merriweather', serif;
 
     /* Spacing */
-    --container-width: 1000px;
-    /* Slightly narrower for focus */
+    --container-width: 1100px;
     --header-height: 70px;
-
-    --radius-md: 20px;
-    /* Values increased for softer feel */
-    --radius-lg: 30px;
-    --radius-full: 999px;
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
+    --radius-full: 9999px;
 
     /* Transitions */
-    --transition-fast: 200ms cubic-bezier(0.25, 1, 0.5, 1);
-    --transition-normal: 400ms cubic-bezier(0.25, 1, 0.5, 1);
+    --transition-fast: 200ms ease;
+    --transition-normal: 400ms ease;
 }
 
 [data-theme="dark"] {
-    --bg-color: #000000;
-    --bg-secondary: rgba(28, 28, 30, 0.6);
-
-    --text-color: #f5f5f7;
-    --text-muted: #86868b;
-
-    --primary-color: #2997ff;
-    --primary-hover: #0071e3;
-
-    --border-color: rgba(255, 255, 255, 0.1);
-
-    --card-bg: rgba(28, 28, 30, 0.6);
-    --card-border: rgba(255, 255, 255, 0.15);
-
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
-    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.3);
+    --bg-color: #050806;
+    /* Almost Black (Deepest Green-Black) */
+    --bg-secondary: #0f1712;
+    /* Slightly lighter */
+    --text-color: #f9fafb;
+    /* White text */
+    --text-muted: #9ca3af;
+    --primary-color: #10b981;
+    /* Brighter green for dark mode visibility */
+    --primary-hover: #34d399;
+    --accent-color: #fbbf24;
+    --border-color: #1f2937;
+    --card-bg: #0f1712;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
 }
 
-/* Base */
+/* Reset & Base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
 body {
-    background-color: var(--bg-color);
-    /* Subtle mesh gradient for "Liquid" feel */
-    background-image:
-        radial-gradient(circle at 15% 50%, rgba(0, 113, 227, 0.08), transparent 25%),
-        radial-gradient(circle at 85% 30%, rgba(212, 175, 55, 0.05), transparent 25%);
-    background-attachment: fixed;
-    color: var(--text-color);
     font-family: var(--font-sans);
-    line-height: 1.5;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color var(--transition-normal), color var(--transition-normal);
     -webkit-font-smoothing: antialiased;
 }
 
-/* Glass Card Mixin */
-.card,
-.project-card,
-.timeline-item {
-    background: var(--card-bg);
-    backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--glass-blur);
-    border: 1px solid var(--card-border);
-    box-shadow: var(--shadow-sm);
-    border-radius: var(--radius-md);
-    transition: all var(--transition-normal);
+img {
+    max-width: 100%;
+    display: block;
 }
 
-.card:hover,
-.project-card:hover {
-    transform: scale(1.02);
-    box-shadow: var(--shadow-md);
-    background: rgba(255, 255, 255, 0.8);
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-fast);
 }
 
-[data-theme="dark"] .card:hover,
-[data-theme="dark"] .project-card:hover {
-    background: rgba(44, 44, 46, 0.8);
+ul {
+    list-style: none;
 }
 
-/* Remove default backgrounds/borders from previous styles to let glass shine */
-.card h3,
-.project-card h3 {
-    font-weight: 600;
-    letter-spacing: -0.01em;
+button {
+    font: inherit;
+    cursor: pointer;
+    background: none;
+    border: none;
 }
 
-/* Chip / Tags update */
-.chip,
-.tag {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    backdrop-filter: blur(4px);
+/* Utilities */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.display-title {
+    font-size: 3.5rem;
+    letter-spacing: -0.02em;
+}
+
+.section-title {
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.lead-text {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+/* Components */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-full);
     font-weight: 500;
+    transition: all var(--transition-fast);
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.btn-secondary:hover {
+    border-color: var(--text-color);
+    background-color: var(--bg-secondary);
+}
+
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+.btn-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    transition: background-color var(--transition-fast);
+}
+
+.btn-icon:hover {
+    background-color: var(--bg-secondary);
 }
 
 /* Floating Glass Navbar */
@@ -302,42 +377,28 @@ section {
 .timeline {
     position: relative;
     padding-left: 2rem;
-    /* border-left: 2px solid var(--border-color); */
-    /* Removed line for cleaner liquid look */
-}
-
-/* Add a central line or subtle guide if needed, but liquid usually floats. Let's keep a very subtle line */
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, transparent, var(--border-color) 20%, var(--border-color) 80%, transparent);
+    border-left: 2px solid var(--border-color);
 }
 
 .timeline-item {
     position: relative;
     margin-bottom: 3rem;
-    padding: 2rem;
-    /* More padding for glass card */
-    /* Glass properties inherited from base rule */
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
 }
 
 .timeline-dot {
     position: absolute;
-    left: -2.6rem;
-    /* Adjusted for new padding/border */
-    top: 2rem;
-    width: 20px;
-    height: 20px;
-    background-color: var(--primary-color);
-    border: 4px solid var(--bg-color);
-    /* Creates a 'cutout' effect */
+    left: -2rem;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--bg-color);
+    border: 2px solid var(--text-color);
     border-radius: 50%;
-    transform: none;
-    box-shadow: 0 0 10px var(--primary-color);
+    transform: translateX(-50%);
 }
 
 .timeline-content h3 {
