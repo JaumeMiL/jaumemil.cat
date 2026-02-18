@@ -340,7 +340,11 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
-    margin-top: 0;
+    max-width: 100%;
+}
+
+.about-text .lead-text {
+    max-width: 100%;
 }
 
 .card {
