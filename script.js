@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h2 class="section-title reveal">${data.title[state.lang]}</h2>
                 <div class="about-grid">
                     <div class="about-text reveal">
-                        <p class="lead-text" style="text-align: left; margin: 0;">${data.summary[state.lang]}</p>
+                        <p class="lead-text">${data.summary[state.lang]}</p>
                     </div>
                     <div class="highlight-cards">
                         ${highlightsHtml}
