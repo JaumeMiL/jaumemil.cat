@@ -1,0 +1,239 @@
+:root {
+    --bg: #ffffff;
+    --fg: #000000;
+    --accent: #ccff00;
+    /* Neon Lime */
+    --font-mono: 'Space Mono', monospace;
+    --font-disp: 'Syncopate', sans-serif;
+    --border: 2px solid #000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-mono);
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+/* Background Grid */
+.grid-lines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 50px 50px;
+    background-image:
+        linear-gradient(to right, #f0f0f0 1px, transparent 1px),
+        linear-gradient(to bottom, #f0f0f0 1px, transparent 1px);
+    z-index: -1;
+}
+
+/* Sidebar styling */
+.sidebar {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 200px;
+    height: calc(100vh - 50px);
+    border-right: var(--border);
+    padding: 2rem;
+    background: var(--bg);
+    z-index: 10;
+}
+
+.nav-item {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--fg);
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    background-color: var(--accent);
+    box-shadow: 4px 4px 0 var(--fg);
+}
+
+.btn-reset {
+    background: none;
+    border: var(--border);
+    padding: 0.5rem;
+    width: 100%;
+    text-align: left;
+    margin-top: 2rem;
+}
+
+/* Header Marquee */
+.brut-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    border-bottom: var(--border);
+    background: var(--fg);
+    color: var(--bg);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    z-index: 20;
+}
+
+.marquee-container {
+    white-space: nowrap;
+    animation: scroll 20s linear infinite;
+}
+
+.marquee-content {
+    font-family: var(--font-disp);
+    font-size: 20px;
+    font-weight: 700;
+    padding-left: 100%;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Main Content Area */
+#content-area {
+    margin-left: 200px;
+    margin-top: 50px;
+    padding: 4rem;
+    max-width: 1000px;
+}
+
+/* Section Components */
+section {
+    margin-bottom: 8rem;
+    border-bottom: var(--border);
+    padding-bottom: 4rem;
+}
+
+h1 {
+    font-family: var(--font-disp);
+    font-size: 5rem;
+    line-height: 0.9;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    word-break: break-all;
+}
+
+h2 {
+    font-family: var(--font-disp);
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    background: var(--fg);
+    color: var(--bg);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 70ch;
+    margin-bottom: 1.5rem;
+}
+
+/* Raw Tags */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.tag-brut {
+    border: var(--border);
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    background: white;
+    transition: 0.2s;
+}
+
+.tag-brut:hover {
+    background: var(--accent);
+    transform: translate(-4px, -4px);
+    box-shadow: 4px 4px 0 var(--fg);
+}
+
+/* Project Block */
+.proj-block {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    border: var(--border);
+    margin-bottom: 2rem;
+    background: white;
+}
+
+.proj-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-right: var(--border);
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.proj-block:hover .proj-img {
+    filter: grayscale(0%);
+}
+
+.proj-info {
+    padding: 2rem;
+}
+
+/* Experience Table */
+.exp-row {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    border-top: var(--border);
+    padding: 1rem 0;
+}
+
+.exp-row:hover {
+    background-color: var(--accent);
+}
+
+.exp-date {
+    font-weight: bold;
+}
+
+@media (max-width: 800px) {
+    .sidebar {
+        display: none;
+    }
+
+    #content-area {
+        margin-left: 0;
+        padding: 2rem;
+    }
+
+    .proj-block {
+        grid-template-columns: 1fr;
+    }
+
+    .proj-img {
+        border-right: none;
+        border-bottom: var(--border);
+        height: 200px;
+    }
+}

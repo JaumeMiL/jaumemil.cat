@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaume Mora | Blaugrana Edition</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚽</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="field-lines"></div>
+
+    <header class="match-header">
+        <div class="score-board">
+            <span class="team-name">JAUME</span>
+            <span class="score">10</span>
+            <span class="separator">-</span>
+            <span class="score">04</span>
+            <span class="team-name">WORLD</span>
+        </div>
+        <nav class="tactics-board">
+            <a href="#about" class="tactic-link" data-tactic="4-3-3">Profile</a>
+            <a href="#experience" class="tactic-link" data-tactic="Career">Stats</a>
+            <a href="#projects" class="tactic-link" data-tactic="Highlights">Highlights</a>
+            <a href="#contact" class="tactic-link" data-tactic="Transfer">Contact</a>
+        </nav>
+        <button id="lang-toggle" class="kit-toggle">EN</button>
+    </header>
+
+    <main id="stadium">
+        <section id="hero" class="kickoff-section">
+            <div class="player-intro">
+                <h1 class="player-name">MORA</h1>
+                <h2 class="player-number">26</h2>
+                <div class="player-role" id="hero-role">AI ENGINEER / COMPUTER VISION</div>
+            </div>
+        </section>
+
+        <!-- Dynamic Content Injected Here -->
+        <div id="dynamic-content"></div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

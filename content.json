@@ -363,7 +363,8 @@
           "Python",
           "MATLAB",
           "Jupyter Notebook",
-          "Git"
+          "Git",
+          "Docker"
         ]
       },
       {
