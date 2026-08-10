@@ -148,8 +148,8 @@
         "company": "SCOPIA UIB & Hospital Universitari Son Espases",
         "location": "Palma, Mallorca, Illes Balears (Híbrid)",
         "dates": {
-          "ca": "Juny 2026 - Actualitat",
-          "en": "June 2026 - Present"
+          "ca": "Juny 2026 - Agost 2026",
+          "en": "June 2026 - August 2026"
         },
         "description": [
           {
@@ -335,8 +335,8 @@
       {
         "id": "proj3",
         "title": {
-          "ca": "REDSCAR - IA per a l'avaluació de ferides",
-          "en": "REDSCAR - AI for Wound Assessment"
+          "ca": "REDSCAR",
+          "en": "REDSCAR"
         },
         "image": "assets/project-redscar.png",
         "desc": {
@@ -359,16 +359,13 @@
             "en": "Computer vision and multimodal deep learning research assistant"
           },
           "result": {
-            "ca": "Per motius de confidencialitat, privacitat i protecció de dades clíniques, no puc publicar el repositori, les dades ni materials clínics o resultats interns del projecte. En cas d'interès, estic disponible per explicar-ne l'abast, la metodologia i el meu rol en una conversa.",
-            "en": "Due to confidentiality, privacy, and clinical data protection requirements, I cannot publish the repository, dataset, clinical materials, or internal results for this project. If relevant, I am available to discuss the scope, methodology, and my role in a conversation."
+            "ca": "L'informe públic del projecte està disponible, però per motius de confidencialitat, privacitat i protecció de dades clíniques no puc compartir el repositori, les dades, materials clínics ni resultats interns. En cas d'interès, estic disponible per explicar-ne l'abast, la metodologia i el meu rol en una conversa.",
+            "en": "The public project report is available, but due to confidentiality, privacy, and clinical data protection requirements I cannot share the repository, dataset, clinical materials, or internal results. If relevant, I am available to discuss the scope, methodology, and my role in a conversation."
           }
         },
         "links": [
           {
-            "text": {
-              "ca": "Veure informe",
-              "en": "View report"
-            },
+            "text": "Veure informe",
             "url": "assets/JaumeMora_Informe_Redscar-v2.pdf"
           }
         ]
