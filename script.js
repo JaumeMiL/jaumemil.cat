@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 ${project.links.length > 0 ? `
                     <div style="display: flex; gap: 1rem;">
-                        ${project.links.map(link => `<a href="${link.url}" target="_blank" class="btn btn-primary btn-sm">${link.text}</a>`).join('')}
+                        ${project.links.map(link => `<a href="${link.url}" target="_blank" class="btn btn-primary btn-sm">${getLinkText(link)}</a>`).join('')}
                     </div>
                 ` : ''}
             `;
@@ -296,6 +296,10 @@ document.addEventListener('DOMContentLoaded', () => {
             elements.modal.setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden';
         };
+    }
+
+    function getLinkText(link) {
+        return typeof link.text === 'object' ? link.text[state.lang] : link.text;
     }
 
     function renderSkills() {
