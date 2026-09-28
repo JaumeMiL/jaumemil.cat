@@ -5,8 +5,8 @@
       "en": "Jaume Mora i Ladària"
     },
     "description": {
-      "ca": "Portfolio de Jaume Mora i Ladària, estudiant d'Enginyeria en Intel·ligència Artificial a la UPC. Especialitzat en Visió per Computador i IA.",
-      "en": "Portfolio of Jaume Mora i Ladària, Artificial Intelligence Engineering student at UPC. Specialized in Computer Vision and AI."
+      "ca": "Portfolio de Jaume Mora i Ladària, graduat en Intel·ligència Artificial per la UPC i estudiant del Màster en Visió per Computador. Experiència en imatge mèdica, deep learning i robòtica.",
+      "en": "Portfolio of Jaume Mora i Ladària, UPC Artificial Intelligence graduate and MSc Computer Vision student. Experience in medical imaging, deep learning and robotics."
     }
   },
   "nav": {
@@ -62,16 +62,16 @@
   "hero": {
     "name": "Jaume Mora i Ladària",
     "role": {
-      "ca": "Estudiant del Grau en Intel·ligència Artificial",
-      "en": "Artificial Intelligence Student"
+      "ca": "Estudiant del Màster en Visió per Computador",
+      "en": "MSc Computer Vision Student"
     },
     "location": {
       "ca": "Barcelona, Catalunya",
       "en": "Barcelona, Catalonia"
     },
     "availability": {
-      "ca": "Disponible per a pràctiques",
-      "en": "Available for internships"
+      "ca": "Disponible per a pràctiques i estades de recerca",
+      "en": "Available for internships and research placements"
     },
     "cta_primary": {
       "ca": "Contacta amb mi",
@@ -89,8 +89,8 @@
     },
     "avatar_url": "assets/profile.jpg",
     "summary": {
-      "ca": "Actualment sóc Estudiant del Grau en Intel·ligència Artificial a la Universitat Politècnica de Catalunya (UPC), amb una sòlida base en visió per computador i experiència pràctica com a becari a la mateixa institució. Els meus estudis i experiència reflecteixen el meu interès per la innovació tecnològica i l'aplicació de tècniques avançades d'IA. Aspiro a continuar desenvolupant les meves habilitats en el camp de la visió per computador i enfortint la meva programació per contribuir al progrés educatiu i tecnològic.",
-      "en": "I am currently an Artificial Intelligence Engineering student at the Universitat Politècnica de Catalunya (UPC), with a strong background in computer vision and practical experience as an intern at the same institution. My studies and practical experience reflect my interest in technological innovation and the application of advanced artificial intelligence techniques. I aspire to continue developing my skills in the field of computer vision and strengthening my programming abilities to contribute to educational and technological progress."
+      "ca": "Actualment sóc estudiant del Màster en Visió per Computador i graduat en Intel·ligència Artificial per la Universitat Politècnica de Catalunya (UPC), amb una sòlida base en visió per computador i experiència pràctica com a becari a la mateixa institució. Els meus estudis i experiència reflecteixen el meu interès per la innovació tecnològica i l'aplicació de tècniques avançades d'IA. Aspiro a continuar desenvolupant les meves habilitats en el camp de la visió per computador i enfortint la meva programació per contribuir al progrés educatiu i tecnològic. A SCOPIA (UIB i Hospital Universitari Son Espases) he desenvolupat sistemes de deep learning per a imatges mèdiques. Els meus interessos de recerca inclouen imatge mèdica, Vision Transformers, models fundacionals, aprenentatge de representacions, aprenentatge multimodal i IA clínica fiable. Tinc experiència amb entorns Linux i computació d'alt rendiment a BOADA i MareNostrum.",
+      "en": "I am currently an MSc Computer Vision student and an Artificial Intelligence graduate from the Universitat Politècnica de Catalunya (UPC), with a strong background in computer vision and practical experience as an intern at the same institution. My studies and practical experience reflect my interest in technological innovation and the application of advanced artificial intelligence techniques. I aspire to continue developing my skills in the field of computer vision and strengthening my programming abilities to contribute to educational and technological progress. At SCOPIA (UIB and Hospital Universitari Son Espases), I developed deep learning systems for medical images. My research interests include medical imaging, Vision Transformers, foundation models, representation learning, multimodal learning and reliable clinical AI. I have experience with Linux environments and high-performance computing on BOADA and MareNostrum."
     },
     "languages": [
       "Python",
@@ -163,6 +163,22 @@
           {
             "ca": "Aplicació d'aprenentatge profund multimodal, preparació de datasets i avaluació de models.",
             "en": "Involved in multimodal deep learning, dataset preparation, and model evaluation."
+          },
+          {
+            "ca": "Desenvolupament autònom d'un pipeline complet en PyTorch per classificar infeccions en 394 imatges de ferides: preprocessament, augment de dades, entrenament, ajust fi, avaluació i selecció de llindars.",
+            "en": "Independently developed an end-to-end PyTorch pipeline for infection classification from 394 wound images, covering preprocessing, augmentation, training, fine-tuning, evaluation and threshold selection."
+          },
+          {
+            "ca": "Comparació de vuit arquitectures CNN i Transformer: ResNet50, EfficientNet-B0, DenseNet121, InceptionV3, ViT-B/16, ConvNeXt-Tiny, Swin-T i Xception. Estudi de retalls de la regió de la ferida i màscares de segmentació dilatades.",
+            "en": "Benchmarked eight CNN and Transformer architectures: ResNet50, EfficientNet-B0, DenseNet121, InceptionV3, ViT-B/16, ConvNeXt-Tiny, Swin-T and Xception. Investigated wound-region crops and dilated segmentation masks."
+          },
+          {
+            "ca": "Anàlisi de falsos negatius, desequilibri de classes, compromisos dels llindars de decisió i generalització. Avaluació de fusió de característiques visuals i variables de qüestionaris clínics, i d'estratègies de calibratge posterior.",
+            "en": "Analysed false negatives, class imbalance, decision-threshold trade-offs and generalisation. Evaluated fusion of image features with clinical questionnaire variables and post-hoc calibration strategies."
+          },
+          {
+            "ca": "Creació de fluxos d'experimentació reproduïbles, comparació sistemàtica de resultats i documentació tècnica de recerca per a REDSCAR.",
+            "en": "Built reproducible experimentation workflows, systematic result comparisons and technical research documentation for REDSCAR."
           }
         ]
       },
@@ -189,6 +205,14 @@
           {
             "ca": "Aprofundiment en tècniques de visió per computador i enfortiment d'habilitats de programació.",
             "en": "Deepened knowledge of computer vision techniques and strengthened programming skills."
+          },
+          {
+            "ca": "Migració autònoma d'aproximadament 30 pràctiques de visió per computador i processament d'imatges amb NumPy, OpenCV i Matplotlib; producció i manteniment d'unes 90 versions en català, castellà i anglès.",
+            "en": "Independently migrated approximately 30 computer vision and image-processing laboratory assignments using NumPy, OpenCV and Matplotlib; produced and maintained around 90 versions in Catalan, Spanish and English."
+          },
+          {
+            "ca": "Reestructuració d'implementacions antigues en fluxos Python reutilitzables per a transformacions, filtratge, extracció de característiques, visualització i anàlisi quantitativa. Validació amb els resultats de referència i diagnòstic de discrepàncies numèriques, regressions i casos límit.",
+            "en": "Re-engineered legacy implementations into reusable Python workflows for transformations, filtering, feature extraction, visualisation and quantitative analysis. Validated against reference outputs and diagnosed numerical discrepancies, regressions and edge cases."
           }
         ]
       },
@@ -215,6 +239,10 @@
           {
             "ca": "Focus en la precisió, consistència i aplicabilitat al món real.",
             "en": "Strong focus on accuracy, consistency, and real-world applicability."
+          },
+          {
+            "ca": "Avaluació de la correcció factual, qualitat del raonament, completesa, rellevància i seguiment d'instruccions. Anàlisi sistemàtica d'al·lucinacions, afirmacions sense suport, contradiccions, ambigüitats i raonaments incomplets.",
+            "en": "Evaluated factual correctness, reasoning quality, completeness, relevance and instruction adherence. Systematically analysed hallucinations, unsupported claims, contradictions, ambiguity and incomplete reasoning."
           }
         ]
       },
@@ -264,27 +292,29 @@
         },
         "image": "assets/project-vision.png",
         "desc": {
-          "ca": "Un nou marc de visió per computador per millorar les habilitats dels robots. Treball de Final de Grau.",
-          "en": "A Novel Computer Vision Framework to Enhance Robot Skills. Bachelor's Thesis."
+          "ca": "Un nou marc de visió per computador per millorar les habilitats dels robots. Treball de Final de Grau. Teleoperació d'un TurtleBot3 Waffle Pi mitjançant gestos amb Python i ROS 2. Nota: 9,5/10.",
+          "en": "A Novel Computer Vision Framework to Enhance Robot Skills. Bachelor's Thesis. Gesture-based teleoperation of a TurtleBot3 Waffle Pi using Python and ROS 2. Grade: 9.5/10."
         },
         "tags": [
           "Python",
           "Computer Vision",
           "Robotics",
-          "Research"
+          "Research",
+          "ROS 2",
+          "MediaPipe"
         ],
         "content": {
           "goal": {
-            "ca": "Millorar la manipulació robòtica mitjançant visió.",
-            "en": "Enhance robotic manipulation using vision."
+            "ca": "Millorar la manipulació robòtica mitjançant visió. Implementació d'un sistema de teleoperació en temps real, des de l'adquisició d'imatges fins al control del robot, amb extracció de 21 punts de la mà mitjançant MediaPipe, inferència amb EurekaNet entrenat amb IPN Hand i comunicació ROS 2.",
+            "en": "Enhance robotic manipulation using vision. Implemented a real-time teleoperation system from image acquisition to robot control, using MediaPipe to extract 21 hand landmarks, EurekaNet inference trained on IPN Hand and ROS 2 communication."
           },
           "role": {
             "ca": "Investigador / Desenvolupador",
             "en": "Researcher / Developer"
           },
           "result": {
-            "ca": "Framework funcional publicat a GitHub.",
-            "en": "Functional framework published on GitHub."
+            "ca": "Framework funcional publicat a GitHub. TFG qualificat amb un 9,5/10 i avaluat amb 600 assajos quantitatius sobre 10 classes de gestos. Teleoperació en temps real amb una latència percebuda aproximada de 200–300 ms per Wi-Fi. Inclou llindars de confiança, votació temporal, bloqueig de gestos, gestos d'aturada d'emergència i comprovacions amb LiDAR.",
+            "en": "Functional framework published on GitHub. Bachelor's thesis graded 9.5/10 and evaluated through 600 quantitative trials across 10 gesture classes. Real-time teleoperation with approximately 200–300 ms perceived latency over Wi-Fi. Includes confidence thresholds, temporal voting, gesture locking, emergency-stop gestures and LiDAR-based checks."
           }
         },
         "links": [
@@ -302,8 +332,8 @@
         },
         "image": "assets/project-ai.png",
         "desc": {
-          "ca": "Assistent de desenvolupament basat en IA amb Jupyter Notebooks.",
-          "en": "AI-based development assistant using Jupyter Notebooks."
+          "ca": "Assistent de desenvolupament basat en IA amb Jupyter Notebooks. 2n lloc al Datathon 2024 (UPC/FME).",
+          "en": "AI-based development assistant using Jupyter Notebooks. 2nd place at Datathon 2024 (UPC/FME)."
         },
         "tags": [
           "AI",
@@ -321,8 +351,8 @@
             "en": "Developer"
           },
           "result": {
-            "ca": "Eina útil per a la productivitat.",
-            "en": "Useful productivity tool."
+            "ca": "Eina útil per a la productivitat. 2n lloc al Datathon 2024 (UPC/FME), combinant prototipatge ràpid, raonament analític, treball en equip i comunicació tècnica.",
+            "en": "Useful productivity tool. 2nd place at Datathon 2024 (UPC/FME), combining rapid prototyping, analytical reasoning, teamwork and technical communication."
           }
         },
         "links": [
@@ -347,12 +377,14 @@
           "Medical AI",
           "Computer Vision",
           "Multimodal Deep Learning",
-          "Privacy"
+          "Privacy",
+          "PyTorch",
+          "Vision Transformers"
         ],
         "content": {
           "goal": {
-            "ca": "Explorar i desenvolupar mètodes d'IA per donar suport a l'avaluació de ferides a partir d'imatges mèdiques i informació clínica complementària.",
-            "en": "Explore and develop AI methods to support wound assessment using medical images and complementary clinical information."
+            "ca": "Explorar i desenvolupar mètodes d'IA per donar suport a l'avaluació de ferides a partir d'imatges mèdiques i informació clínica complementària. Desenvolupament d'un pipeline PyTorch amb 394 imatges, comparació de vuit arquitectures CNN i Transformer, preprocessament centrat en la ferida i anàlisi d'errors, desequilibri de classes i llindars de decisió. Exploració de fusió amb variables clíniques i calibratge posterior.",
+            "en": "Explore and develop AI methods to support wound assessment using medical images and complementary clinical information. Developed a PyTorch pipeline using 394 images, comparing eight CNN and Transformer architectures, wound-focused preprocessing and analysis of errors, class imbalance and decision thresholds. Explored fusion with clinical variables and post-hoc calibration."
           },
           "role": {
             "ca": "Assistent d'investigació en visió per computador i deep learning multimodal",
@@ -390,7 +422,16 @@
           "MATLAB",
           "Jupyter Notebook",
           "Git",
-          "Docker"
+          "Docker",
+          "PyTorch",
+          "TensorFlow",
+          "scikit-learn",
+          "OpenCV",
+          "NumPy",
+          "Matplotlib",
+          "ROS 2",
+          "GitHub",
+          "REST APIs"
         ]
       },
       {
@@ -416,6 +457,75 @@
           "Comunicació",
           "Adaptabilitat"
         ]
+      },
+      {
+        "name": {
+          "ca": "Visió per Computador i Aprenentatge Profund",
+          "en": "Computer Vision & Deep Learning"
+        },
+        "items": [
+          "Medical Imaging",
+          "CNNs",
+          "Vision Transformers",
+          "ViT-B/16",
+          "Transfer Learning",
+          "Fine-tuning",
+          "Segmentation-based Preprocessing",
+          "Multimodal Learning",
+          "Representation Learning",
+          "Model Evaluation",
+          "Error Analysis",
+          "Class-imbalance Analysis",
+          "Threshold Analysis",
+          "Generalisation Analysis"
+        ]
+      },
+      {
+        "name": {
+          "ca": "Computació per a la Recerca",
+          "en": "Research Computing"
+        },
+        "items": [
+          "Linux",
+          "SSH",
+          "SLURM",
+          "MareNostrum",
+          "BOADA",
+          "High-Performance Computing",
+          "Batch Jobs",
+          "Queue Management"
+        ]
+      },
+      {
+        "name": {
+          "ca": "Models de Llenguatge",
+          "en": "Language Models"
+        },
+        "items": [
+          "Hugging Face",
+          "Llama",
+          "Qwen",
+          "LoRA / QLoRA",
+          "Multimodal Models",
+          "Embeddings",
+          "RAG",
+          "LLM Evaluation"
+        ]
+      },
+      {
+        "name": {
+          "ca": "Enginyeria de Programari",
+          "en": "Software Engineering"
+        },
+        "items": [
+          "Object-oriented Programming",
+          "Testing",
+          "Debugging",
+          "Distributed Systems",
+          "Structured Logging",
+          "Reliability Engineering",
+          "Technical Documentation"
+        ]
       }
     ]
   },
@@ -427,14 +537,29 @@
     "items": [
       {
         "degree": {
+          "ca": "Màster en Visió per Computador",
+          "en": "MSc in Computer Vision"
+        },
+        "school": "UAB, UB, UPC, UPF & UOC",
+        "dates": {
+          "ca": "Setembre 2026 - Actualitat",
+          "en": "September 2026 - Present"
+        },
+        "desc": {
+          "ca": "Barcelona, Catalunya. Programa interuniversitari de 60 ECTS impartit en anglès, centrat en visió per computador, deep learning, anàlisi d'imatges i metodologia de recerca. Objectiu del TFM: estada externa de recerca autofinançada entre maig i agost de 2027.",
+          "en": "Barcelona, Catalonia. English-taught, 60 ECTS interuniversity programme focused on computer vision, deep learning, image analysis and research methodology. MSc thesis objective: a self-funded external visiting research placement from May to August 2027."
+        }
+      },
+      {
+        "degree": {
           "ca": "Grau en Intel·ligència Artificial",
           "en": "Bachelor's Degree in Artificial Intelligence"
         },
         "school": "Universitat Politècnica de Catalunya (UPC)",
         "dates": "2022 - 2026",
         "desc": {
-          "ca": "Barcelona, Catalunya",
-          "en": "Barcelona, Catalonia"
+          "ca": "Barcelona, Catalunya. Graduat el juny de 2026. Formació en machine learning, deep learning, visió per computador, processament del llenguatge natural, estadística, sistemes distribuïts, computació a gran escala, enginyeria del programari i MLOps.",
+          "en": "Barcelona, Catalonia. Graduated in June 2026. Coursework in machine learning, deep learning, computer vision, natural language processing, statistics, distributed systems, large-scale computing, software engineering and MLOps."
         }
       },
       {
@@ -454,6 +579,14 @@
       "en": "Honors & Awards"
     },
     "items": [
+      {
+        "title": {
+          "ca": "2n lloc, Datathon 2024 — Aider Assistant",
+          "en": "2nd Place, Datathon 2024 — Aider Assistant"
+        },
+        "date": "2024",
+        "issuer": "UPC / FME"
+      },
       {
         "title": {
           "ca": "3r Premi, Premi Sambori OCB",
@@ -478,8 +611,8 @@
       "en": "Contact"
     },
     "text": {
-      "ca": "Estic obert a noves oportunitats. No dubtis en contactar amb mi.",
-      "en": "I'm open to new opportunities. Feel free to reach out."
+      "ca": "Estic obert a noves oportunitats. No dubtis en contactar amb mi. Cerco una estada externa de recerca autofinançada per al TFM entre maig i agost de 2027, en visió per computador, imatge mèdica o deep learning.",
+      "en": "I'm open to new opportunities. Feel free to reach out. I am seeking a self-funded external visiting research placement for my MSc thesis from May to August 2027, in computer vision, medical imaging or deep learning."
     },
     "email": "moraladariajaume@gmail.com",
     "linkedin": "https://www.linkedin.com/in/jaumemil",

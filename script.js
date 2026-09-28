@@ -347,7 +347,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="timeline-content">
                     <h3>${item.degree[state.lang]}</h3>
                     <div class="timeline-meta">
-                        <span>${item.dates}</span>
+                        <span>${typeof item.dates === 'object' ? item.dates[state.lang] : item.dates}</span>
                         <span>•</span>
                         <span>${item.school}</span>
                     </div>
