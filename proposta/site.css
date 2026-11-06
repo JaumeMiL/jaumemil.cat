@@ -482,3 +482,26 @@ h3 { font-size: clamp(1.55rem, 2.8vw, 2.15rem); }
     --accent: #a0eac9;
     --soft: #1c382f;
 }
+:root[data-design="7"] {
+    --paper: #fcf8f1;
+    --surface: #fffdf8;
+    --ink: #212c26;
+    --muted: #535d53;
+    --line: #ded8cb;
+    --accent: #35654e;
+    --soft: #eee9de;
+    --dark: #17392e;
+    --dark-surface: #22483b;
+    --lime: #d4ebc9;
+}
+:root[data-design="7"][data-theme="dark"] {
+    --paper: #121d18;
+    --surface: #1c2a23;
+    --ink: #f9f3e9;
+    --muted: #cbd0c3;
+    --line: #495a4c;
+    --accent: #add8b7;
+    --soft: #28392f;
+    --dark: #10271e;
+    --dark-surface: #1c3a2e;
+}

@@ -1,0 +1,103 @@
+.hybrid-hero {
+    gap: clamp(2.25rem, 7vw, 6rem);
+}
+
+.hybrid-portrait {
+    position: relative;
+    isolation: isolate;
+    border-radius: .9rem;
+    transform: rotate(1.5deg);
+}
+
+.hybrid-portrait::before {
+    position: absolute;
+    z-index: -1;
+    inset: 3% -3% -3% 4%;
+    border: 1px solid var(--line);
+    border-radius: .95rem;
+    background: var(--soft);
+    content: "";
+    transform: rotate(-4deg);
+}
+
+.hybrid-portrait .portrait-media {
+    border-radius: .52rem;
+}
+
+.hybrid-portrait figcaption {
+    padding-inline: .3rem;
+}
+
+.hybrid-work-grid {
+    grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+}
+
+.hybrid-work-grid .work-tile {
+    border-radius: .95rem;
+}
+
+.hybrid-feature {
+    grid-row: span 2;
+}
+
+.hybrid-feature .work-tile-art {
+    display: grid;
+    flex: 1;
+    min-height: clamp(12rem, 20vw, 16rem);
+    place-items: center;
+}
+
+.hybrid-feature .work-tile-art img {
+    width: min(65%, 16rem);
+    height: auto;
+}
+
+.hybrid-secondary {
+    display: grid;
+    grid-template-columns: 36% minmax(0, 1fr);
+}
+
+.hybrid-secondary .work-tile-art {
+    height: auto;
+}
+
+.hybrid-secondary .work-tile-copy {
+    padding: 1.15rem 2.4rem 1.15rem 1.1rem;
+}
+
+.hybrid-secondary h3 {
+    font-size: clamp(1.35rem, 2vw, 1.7rem);
+}
+
+.hybrid-secondary .tile-arrow {
+    top: 1rem;
+    right: .85rem;
+}
+
+.hybrid-aider-art {
+    background: #f8f8f6;
+}
+
+@media (max-width: 63rem) {
+    .hybrid-secondary {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hybrid-secondary .work-tile-art {
+        height: 8.5rem;
+    }
+}
+
+@media (max-width: 48rem) {
+    .hybrid-portrait {
+        width: min(94%, 22rem);
+    }
+
+    .hybrid-work-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hybrid-feature {
+        grid-row: auto;
+    }
+}

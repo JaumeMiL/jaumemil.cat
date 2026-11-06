@@ -2,7 +2,7 @@ const root = document.documentElement;
 const query = new URLSearchParams(location.search);
 const english = query.get('lang') === 'en';
 const requestedDesign = document.body.dataset.design || query.get('disseny');
-const design = /^[1-6]$/.test(requestedDesign) ? requestedDesign : null;
+const design = /^[1-7]$/.test(requestedDesign) ? requestedDesign : null;
 const languageToggle = document.querySelector('[data-language-toggle]');
 
 if (design) root.dataset.design = design;
@@ -21,7 +21,7 @@ if (english || design) {
     for (const link of document.querySelectorAll('a[href]')) {
         if (link === languageToggle || link.getAttribute('href').startsWith('#')) continue;
         const url = new URL(link.href);
-        const isProposal = /^\/proposta(?:[1-6]\/|\/(?:cv\/|contacte\/|sobre-mi\/|projectes\/)?)$/.test(url.pathname);
+        const isProposal = /^\/proposta(?:[1-7]\/|\/(?:cv\/|contacte\/|sobre-mi\/|projectes\/)?)$/.test(url.pathname);
         if (url.origin !== location.origin || !isProposal) continue;
         if (design && link.matches('.brand') && url.pathname === '/proposta/') {
             url.pathname = '/proposta' + design + '/';
