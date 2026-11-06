@@ -472,7 +472,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateLangButton() {
-        elements.langToggle.textContent = state.lang === 'ca' ? 'EN' : 'CA';
+        elements.langToggle.textContent = state.lang === 'ca' ? 'EN' : 'CAT';
     }
 
     function applyTheme(persist = false) {

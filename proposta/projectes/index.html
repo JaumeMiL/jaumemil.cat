@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ca">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <meta name="description" content="Projectes de Jaume Mora i Ladària en imatge mèdica, robòtica i intel·ligència artificial aplicada.">
+    <title data-en="Projects — Jaume Mora i Ladària">Projectes — Jaume Mora i Ladària</title>
+    <link rel="icon" href="/proposta/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../site.css">
+    <script src="../site.js" defer></script>
+</head>
+<body data-page="projectes">
+    <a class="skip-link" href="#contingut" data-en="Skip to content">Ves al contingut</a>
+    <header class="site-header">
+        <div class="container nav-layout">
+            <a class="brand" href="/proposta/"><img src="/proposta/icon.svg" width="34" height="34" alt="">Jaume Mora</a>
+            <nav class="site-nav" aria-label="Navegació principal" data-en-label="Main navigation">
+                <a href="/proposta/" data-en="Home">Inici</a>
+                <a href="/proposta/projectes/" aria-current="page" data-en="Projects">Projectes</a>
+                <a href="/proposta/sobre-mi/" data-en="About">Sobre mi</a>
+                <a href="/proposta/cv/" data-en="CV">CV</a>
+            </nav>
+            <div class="nav-controls">
+                <a class="nav-control" href="?lang=en" hreflang="en" lang="en" aria-label="Read in English" data-en-label="Llegeix en català" data-language-toggle data-en="CAT" hidden>EN</a>
+                <button class="nav-control" type="button" aria-label="Mode fosc" data-en-label="Dark mode" data-theme-toggle hidden>
+                    <svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.8 15.2A9 9 0 0 1 8.8 3.2 9 9 0 1 0 20.8 15.2Z"/></svg>
+                    <svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M19 5l-1.4 1.4M6.4 17.6 5 19"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main id="contingut">
+        <header class="container page-hero">
+            <p class="eyebrow" data-en="Selected work">Selecció de treballs</p>
+            <h1 data-en="Projects">Projectes</h1>
+            <p data-en="From studying infection in medical images to steering a robot with hand gestures. Here’s what I built, how I tested it and where you can explore the work.">Des d’estudiar infeccions en imatges mèdiques fins a controlar un robot amb gestos. Aquí explic com vaig construir i avaluar cada projecte, i on en pots consultar els detalls.</p>
+        </header>
+
+        <article class="container project-feature" id="redscar" aria-labelledby="redscar-title">
+            <div class="project-feature-head">
+                <div>
+                    <p class="eyebrow" data-en="01 / Medical imaging · 2026">01 / Imatge mèdica · 2026</p>
+                    <h2 id="redscar-title">REDSCAR</h2>
+                    <p data-en="Can a photograph help identify signs of infection in a surgical wound? I worked on this research question as a research assistant with SCOPIA at the University of the Balearic Islands and Hospital Universitari Son Espases.">Pot una fotografia ajudar a detectar signes d’infecció en una ferida quirúrgica? Vaig treballar en aquesta pregunta com a assistent de recerca amb SCOPIA (Universitat de les Illes Balears) i l’Hospital Universitari Son Espases.</p>
+                </div>
+                <figure class="project-visual project-visual-redscar">
+                    <img src="/assets/project-redscar.png" alt="" width="422" height="292" decoding="async">
+                </figure>
+            </div>
+
+            <dl class="project-facts">
+                <div>
+                    <dt data-en="Images in the study">Imatges de l’estudi</dt>
+                    <dd>394</dd>
+                </div>
+                <div>
+                    <dt data-en="Architectures compared">Arquitectures comparades</dt>
+                    <dd>8</dd>
+                </div>
+                <div>
+                    <dt data-en="Tools">Eines</dt>
+                    <dd>PyTorch</dd>
+                </div>
+            </dl>
+
+            <div class="project-feature-details">
+                <section>
+                    <h3 data-en="My contribution">La meva aportació</h3>
+                    <p data-en="I built the PyTorch workflow for preparing images, training models and evaluating their predictions. I compared CNNs and vision transformers using both full images and views focused on the wound.">Vaig desenvolupar el flux de treball en PyTorch per preparar les imatges, entrenar els models i avaluar les prediccions. Vaig comparar xarxes convolucionals i transformadors visuals amb imatges completes i amb imatges centrades en la ferida.</p>
+                </section>
+                <section>
+                    <h3 data-en="What I evaluated">Què vaig avaluar</h3>
+                    <p data-en="I studied how the decision threshold affected missed infections and false alarms in an imbalanced dataset. I also explored how clinical questionnaire responses could complement image predictions.">Vaig estudiar com el llindar de decisió afectava les infeccions que el model deixava passar i les falses alarmes, en un conjunt de dades desequilibrat. També vaig explorar com les respostes al qüestionari clínic podien complementar les prediccions a partir de les imatges.</p>
+                </section>
+            </div>
+
+            <div class="project-links">
+                <a class="button button-primary" href="/assets/JaumeMora_Informe_Redscar-v2.pdf" data-en="Read the public report (PDF)">Llegir l’informe públic (PDF)</a>
+            </div>
+        </article>
+
+        <section class="container project-section" aria-labelledby="more-projects-title">
+            <p class="eyebrow" data-en="Robotics and applied AI">Robòtica i IA aplicada</p>
+            <h2 id="more-projects-title" data-en="More projects">Més projectes</h2>
+
+            <div class="project-grid">
+                <article class="project-card" id="robotica" aria-labelledby="robot-title">
+                    <figure class="project-visual project-visual-robot">
+                        <img src="/assets/project-vision.png" alt="" width="1920" height="1080" loading="lazy" decoding="async">
+                    </figure>
+                    <div class="project-card-body">
+                        <p class="eyebrow" data-en="02 / Bachelor’s thesis · UPC, 2026">02 / Treball de fi de grau · UPC, 2026</p>
+                        <h3 id="robot-title" data-en="Controlling a robot with hand gestures">Controlar un robot amb gestos</h3>
+                        <p data-en="I built a real-time control system for a TurtleBot3 Waffle Pi. MediaPipe tracked hand landmarks, EurekaNet classified the gestures and ROS 2 relayed the commands to the robot.">Vaig construir un sistema per controlar un TurtleBot3 Waffle Pi en temps real. MediaPipe detectava els punts clau de la mà, EurekaNet classificava el gest i ROS 2 enviava l’ordre al robot.</p>
+                        <p class="project-note" data-en="600 trials across 10 gestures · Thesis grade 9.5/10">600 assajos amb 10 gestos · Nota del TFG 9,5/10</p>
+                        <div class="project-links">
+                            <a class="button button-secondary" href="https://hdl.handle.net/2117/460251" data-en="Read the thesis at UPC">Llegir el TFG a la UPC</a>
+                            <a href="https://github.com/JaumeMiL/computer_vision_robot_skills_tfg" data-en="Code on GitHub">Codi a GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" id="aider" aria-labelledby="aider-title">
+                    <figure class="project-visual project-visual-aider">
+                        <img src="/assets/project-ai.png" alt="" width="1920" height="1080" loading="lazy" decoding="async">
+                    </figure>
+                    <div class="project-card-body">
+                        <p class="eyebrow" data-en="03 / Team project · Datathon FME 2025">03 / Projecte en equip · Datathon FME 2025</p>
+                        <h3 id="aider-title">aiDER Assistant</h3>
+                        <p data-en="My team built a prototype that estimates the likelihood of closing a sale and explains which factors drive the prediction. A chat interface lets users ask about opportunities in everyday language.">Amb el meu equip vam construir un prototip que estima la probabilitat de tancar una venda i explica quins factors pesen en la predicció. Amb la interfície de xat es poden fer preguntes sobre les oportunitats en llenguatge planer.</p>
+                        <p class="project-note">Python · XGBoost · Gemini</p>
+                        <div class="project-links">
+                            <a class="button button-secondary" href="https://github.com/JaumeMiL/aider_assistant" data-en="Explore the aiDER code">Veure el codi d’aiDER</a>
+                            <a href="https://devpost.com/software/aider-assistant" data-en="Project on Devpost">Projecte a Devpost</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-layout">
+            <p>© 2026 Jaume Mora i Ladària</p>
+            <div class="footer-links">
+                <a href="/proposta/sobre-mi/#contacte" data-en="Contact">Contacte</a>
+                <a href="/" data-en="Current website">Web actual</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
