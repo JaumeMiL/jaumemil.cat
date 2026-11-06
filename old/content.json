@@ -87,7 +87,7 @@
       "ca": "Sobre mi",
       "en": "About Me"
     },
-    "avatar_url": "assets/profile.jpg",
+    "avatar_url": "/assets/profile.jpg",
     "summary": {
       "ca": "Actualment sóc estudiant del Màster en Visió per Computador i graduat en Intel·ligència Artificial per la Universitat Politècnica de Catalunya (UPC), amb una sòlida base en visió per computador i experiència pràctica com a becari a la mateixa institució. Els meus estudis i experiència reflecteixen el meu interès per la innovació tecnològica i l'aplicació de tècniques avançades d'IA. Aspiro a continuar desenvolupant les meves habilitats en el camp de la visió per computador i enfortint la meva programació per contribuir al progrés educatiu i tecnològic. A SCOPIA (UIB i Hospital Universitari Son Espases) he desenvolupat sistemes de deep learning per a imatges mèdiques. Els meus interessos de recerca inclouen imatge mèdica, Vision Transformers, models fundacionals, aprenentatge de representacions, aprenentatge multimodal i IA clínica fiable. Tinc experiència amb entorns Linux i computació d'alt rendiment a BOADA i MareNostrum.",
       "en": "I am currently an MSc Computer Vision student and an Artificial Intelligence graduate from the Universitat Politècnica de Catalunya (UPC), with a strong background in computer vision and practical experience as an intern at the same institution. My studies and practical experience reflect my interest in technological innovation and the application of advanced artificial intelligence techniques. I aspire to continue developing my skills in the field of computer vision and strengthening my programming abilities to contribute to educational and technological progress. At SCOPIA (UIB and Hospital Universitari Son Espases), I developed deep learning systems for medical images. My research interests include medical imaging, Vision Transformers, foundation models, representation learning, multimodal learning and reliable clinical AI. I have experience with Linux environments and high-performance computing on BOADA and MareNostrum."
@@ -290,7 +290,7 @@
           "ca": "Computer Vision for Robot Skills (TFG)",
           "en": "Computer Vision for Robot Skills (TFG)"
         },
-        "image": "assets/project-vision.png",
+        "image": "/assets/project-vision.png",
         "desc": {
           "ca": "Un nou marc de visió per computador per millorar les habilitats dels robots. Treball de Final de Grau. Teleoperació d'un TurtleBot3 Waffle Pi mitjançant gestos amb Python i ROS 2. Nota: 9,5/10.",
           "en": "A Novel Computer Vision Framework to Enhance Robot Skills. Bachelor's Thesis. Gesture-based teleoperation of a TurtleBot3 Waffle Pi using Python and ROS 2. Grade: 9.5/10."
@@ -330,7 +330,7 @@
           "ca": "Aider Assistant",
           "en": "Aider Assistant"
         },
-        "image": "assets/project-ai.png",
+        "image": "/assets/project-ai.png",
         "desc": {
           "ca": "Assistent de desenvolupament basat en IA amb Jupyter Notebooks. 2n lloc al Datathon 2024 (UPC/FME).",
           "en": "AI-based development assistant using Jupyter Notebooks. 2nd place at Datathon 2024 (UPC/FME)."
@@ -368,7 +368,7 @@
           "ca": "REDSCAR",
           "en": "REDSCAR"
         },
-        "image": "assets/project-redscar.png",
+        "image": "/assets/project-redscar.png",
         "desc": {
           "ca": "Projecte de recerca amb SCOPIA UIB i l'Hospital Universitari Son Espases aplicant visió per computador i deep learning multimodal a l'avaluació de ferides.",
           "en": "Research project with SCOPIA UIB and Hospital Universitari Son Espases applying computer vision and multimodal deep learning to wound assessment."
@@ -398,7 +398,7 @@
         "links": [
           {
             "text": "Veure informe",
-            "url": "assets/JaumeMora_Informe_Redscar-v2.pdf"
+            "url": "/assets/JaumeMora_Informe_Redscar-v2.pdf"
           }
         ]
       }

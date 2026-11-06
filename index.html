@@ -1,84 +1,205 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
-
+<!doctype html>
+<html lang="ca">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Jaume Mora i Ladària - Artificial Intelligence graduate and MSc Computer Vision student">
-    <link rel="alternate" hreflang="ca" href="?lang=ca" />
-    <link rel="alternate" hreflang="en" href="?lang=en" />
-    <title>Jaume Mora i Ladària</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portafolis de Jaume Mora i Ladària. Visió per computador, imatge mèdica i robòtica.">
+    <title data-en="Jaume Mora i Ladària — Computer vision">Jaume Mora i Ladària — Visió per computador</title>
     <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="64x64">
+    <link rel="stylesheet" href="/site.css?v=1">
+    <link rel="stylesheet" href="/home.css?v=1">
+    <script src="/site.js?v=1" defer></script>
 </head>
-
-<body>
-
-    <nav class="glass-nav">
-        <div class="nav-container">
-            <a href="#" class="logo">Jaume</a>
-            <div class="nav-links" id="nav-links">
-                <!-- Links injected by JS -->
-            </div>
+<body data-page="inici">
+    <a class="skip-link" href="#contingut" data-en="Skip to content">Ves al contingut</a>
+    <header class="site-header">
+        <div class="container nav-layout">
+            <a class="brand" href="/" aria-current="page">Jaume</a>
+            <nav class="site-nav" id="navegacio" aria-label="Navegació principal" data-en-label="Main navigation">
+                <a href="/sobre-mi/" data-en="About">Sobre mi</a>
+                <a href="/trajectoria/" data-en="Background">Trajectòria</a>
+                <a href="/projectes/" data-en="Projects">Projectes</a>
+                <a href="/contacte/" data-en="Contact">Contacte</a>
+            </nav>
             <div class="nav-controls">
-                <button id="lang-toggle" class="btn-icon" aria-label="Switch Language">EN</button>
-                <button id="theme-toggle" class="btn-icon" aria-label="Toggle Dark Mode">
-                    <span class="icon-sun">☀</span>
-                    <span class="icon-moon">☾</span>
+                <a class="nav-control" href="?lang=en" hreflang="en" lang="en" aria-label="Read in English" data-en-label="Llegeix en català" data-language-toggle data-en="CAT" hidden>EN</a>
+                <button class="nav-control" type="button" aria-label="Mode fosc" data-en-label="Dark mode" data-theme-toggle hidden>
+                    <svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.8 15.2A9 9 0 0 1 8.8 3.2 9 9 0 1 0 20.8 15.2Z"/></svg>
+                    <svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M19 5l-1.4 1.4M6.4 17.6 5 19"/></svg>
                 </button>
-                <a href="assets/Jaume_Mora_Research_CV.pdf" download id="cta-download" class="btn btn-primary btn-sm">Download CV</a>
-                <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false">
-                    <span></span><span></span><span></span>
+                <a class="button button-primary nav-cv" href="/cv/">CV</a>
+                <button class="nav-control" type="button" data-menu-toggle aria-expanded="false" aria-controls="navegacio" aria-label="Menú" data-en-label="Menu" hidden>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
                 </button>
             </div>
         </div>
-    </nav>
+    </header>
+    <main id="contingut">
+        <section class="hero container hybrid-hero" aria-labelledby="nom">
+            <div class="hero-copy">
+                <p class="eyebrow hero-kicker"><span></span><span data-en="Computer vision · Applied AI">Visió per computador · IA aplicada</span></p>
+                <h1 id="nom">Jaume <span>Mora i Ladària</span></h1>
+                <p class="hero-intro" data-en="I’m an AI graduate from UPC and a master’s student in Computer Vision. I’m interested in building and testing solutions with real images and data, from medical imaging to robotics.">Soc graduat en Intel·ligència Artificial per la UPC i faig el Màster en Visió per Computador. M’interessa desenvolupar i provar solucions amb imatges i dades reals, de la imatge mèdica a la robòtica.</p>
+                <div class="button-group">
+                    <a class="button button-primary" href="/projectes/"><span data-en="Explore my projects">Explora els projectes</span><span aria-hidden="true">↗</span></a>
+                    <a class="button button-secondary" href="/cv/"><span data-en="Read my CV">Consulta el CV</span><span aria-hidden="true">→</span></a>
+                </div>
+                <div class="social-links hero-links">
+                    <a class="social-link social-linkedin" href="https://www.linkedin.com/in/jaumemil"><img src="/assets/logos/linkedin.svg" width="17" height="17" alt="">LinkedIn</a>
+                    <a class="social-link social-github" href="https://github.com/JaumeMiL"><img src="/assets/logos/github.svg" width="17" height="17" alt="">GitHub</a>
+                    <a class="social-link" href="mailto:moraladariajaume@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><span data-en="Email">Correu</span></a>
+                </div>
+            </div>
+            <figure class="hero-portrait hybrid-portrait">
+                <div class="portrait-media">
+                    <img src="/assets/retrat.webp" width="800" height="835" alt="Jaume Mora i Ladària" fetchpriority="high">
+                    <span class="portrait-box" aria-hidden="true">
+                        <span class="portrait-corner top-left"></span>
+                        <span class="portrait-corner top-right"></span>
+                        <span class="portrait-corner bottom-left"></span>
+                        <span class="portrait-corner bottom-right"></span>
+                    </span>
+                    <span class="portrait-detection">100% JAUME</span>
+                </div>
+                <figcaption><span>Jaume Mora i Ladària</span><span>Barcelona · Mallorca</span></figcaption>
+            </figure>
+        </section>
 
-    <main id="main-content">
-        <!-- Sections injected by JS -->
-        <section id="hero" class="hero-section text-center">
+        <section class="home-work" aria-labelledby="projectes">
             <div class="container">
-                <div class="hero-content">
-                    <div class="hero-avatar">
-                        <div class="avatar-circle"></div>
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow" data-en="01 / Project portfolio">01 / Portafolis</p>
+                        <h2 id="projectes" data-en="Selected work">Projectes destacats</h2>
                     </div>
-                    <h1 id="hero-name" class="display-title">Loading...</h1>
-                    <p id="hero-role" class="lead-text">Please enable JavaScript</p>
-                    <div class="hero-actions">
-                        <a href="#contact" class="btn btn-primary" id="hero-cta-primary">Contact</a>
-                        <a href="#projects" class="btn btn-secondary" id="hero-cta-secondary">Projects</a>
-                    </div>
-                    <div id="hero-availability" class="availability-badge"></div>
+                    <a class="text-link" href="/projectes/"><span data-en="All projects">Tots els projectes</span><span aria-hidden="true">↗</span></a>
+                </div>
+                <div class="work-grid hybrid-work-grid">
+                    <a class="work-tile hybrid-feature" href="/projectes/#redscar">
+                        <div class="work-tile-art redscar-art">
+                            <img src="/assets/project-redscar.png" width="422" height="292" alt="" loading="lazy" decoding="async">
+                        </div>
+                        <div class="work-tile-copy">
+                            <p class="eyebrow" data-en="Medical imaging · Palma, Mallorca">Imatge mèdica · Palma, Mallorca</p>
+                            <h3>REDSCAR</h3>
+                            <p data-en="How do you evaluate an infection classifier when missed cases matter? A research project with SCOPIA and Hospital Universitari Son Espases.">Com s’avalua un classificador d’infeccions quan importa quins casos passen desapercebuts? Un projecte de recerca amb SCOPIA i l’Hospital Universitari Son Espases.</p>
+                            <span class="tile-arrow" aria-hidden="true">↗</span>
+                        </div>
+                    </a>
+                    <a class="work-tile hybrid-secondary" href="/projectes/#robotica">
+                        <div class="work-tile-art robot-art">
+                            <img src="/assets/project-vision.png" width="1920" height="1080" alt="" loading="lazy" decoding="async">
+                        </div>
+                        <div class="work-tile-copy">
+                            <p class="eyebrow" data-en="Robotics · Thesis">Robòtica · TFG</p>
+                            <h3 data-en="Gesture-controlled robotics">Robòtica controlada per gestos</h3>
+                            <p data-en="A real-time system that turns hand gestures into commands for a TurtleBot3, tested across 600 trials.">Un sistema que converteix gestos de la mà en ordres per a un TurtleBot3 en temps real, avaluat en 600 assajos.</p>
+                            <span class="tile-arrow" aria-hidden="true">↗</span>
+                        </div>
+                    </a>
+                    <a class="work-tile hybrid-secondary" href="/projectes/#aider">
+                        <div class="work-tile-art hybrid-aider-art">
+                            <img src="/assets/project-ai.png" width="1920" height="1080" alt="" loading="lazy" decoding="async">
+                        </div>
+                        <div class="work-tile-copy">
+                            <p class="eyebrow" data-en="Applied AI · Team project">IA aplicada · Projecte en equip</p>
+                            <h3>aiDER Assistant</h3>
+                            <p data-en="A prototype that explains sales predictions in everyday language.">Un prototip que explica prediccions de vendes en llenguatge planer.</p>
+                            <span class="tile-arrow" aria-hidden="true">↗</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
-    </main>
 
-    <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-left">
-                <p id="footer-copyright">&copy; 2026</p>
+        <div class="container home-organizations hybrid-background">
+            <section aria-labelledby="formacio">
+                <div class="section-heading">
+                    <h2 id="formacio" data-en="Education">Formació</h2>
+                    <a class="text-link" href="/trajectoria/#formacio"><span data-en="Full education history">Tota la formació</span><span aria-hidden="true">↗</span></a>
+                </div>
+                <ul class="hybrid-background-list" role="list">
+                    <li class="hybrid-background-entry">
+                        <div>
+                            <p class="hybrid-background-date" data-en="September 2026–present">Setembre de 2026–actualitat</p>
+                            <h3 data-en="MSc in Computer Vision">Màster en Visió per Computador</h3>
+                            <p data-en="Joint programme at UAB, UB, UPC, UPF and UOC">Màster interuniversitari de la UAB, UB, UPC, UPF i UOC</p>
+                        </div>
+                        <a class="organization-mark hybrid-education-mark" href="https://www.uab.cat/web/estudiar/l-oferta-de-masters-oficials/informacio-general-1096480139517.html?param1=1345875379850" hreflang="ca" data-en-href="https://www.uab.cat/web/estudiar/official-master-s-degrees/general-information/-1096480962610.html?param1=1345875379850" aria-label="Web del Màster en Visió per Computador" data-en-label="Computer Vision master’s programme website"><img src="/assets/logos/mcv.png" width="300" height="155" alt="" loading="lazy"></a>
+                    </li>
+                    <li class="hybrid-background-entry">
+                        <div>
+                            <p class="hybrid-background-date">2022–2026</p>
+                            <h3 data-en="BSc in Artificial Intelligence">Grau en Intel·ligència Artificial</h3>
+                            <p>Universitat Politècnica de Catalunya (UPC)</p>
+                        </div>
+                        <a class="organization-mark" href="https://www.upc.edu/ca" hreflang="ca" data-en-href="https://www.upc.edu/en" aria-label="Web de la UPC" data-en-label="UPC website"><img src="/assets/logos/upc.svg" width="567" height="170" alt="" loading="lazy"></a>
+                    </li>
+                    <li class="hybrid-background-entry">
+                        <div>
+                            <p class="hybrid-background-date">2020–2022</p>
+                            <h3 data-en="Science and Technology Baccalaureate">Batxillerat científic i tecnològic</h3>
+                            <p>IES Llorenç Garcías i Font</p>
+                        </div>
+                        <a class="organization-mark hybrid-education-mark" href="https://iesarta.eu/" hreflang="ca" aria-label="Web de l’IES Llorenç Garcías i Font" data-en-label="IES Llorenç Garcías i Font website (Catalan)"><img src="/assets/logos/ies-arta.png" width="192" height="192" alt="" loading="lazy"></a>
+                    </li>
+                </ul>
+            </section>
+
+            <section aria-labelledby="trajectoria">
+                <div class="section-heading">
+                    <h2 id="trajectoria" data-en="Experience">Trajectòria</h2>
+                    <a class="text-link" href="/trajectoria/#experiencia"><span data-en="Full work history">Tota l’experiència</span><span aria-hidden="true">↗</span></a>
+                </div>
+                <ul class="hybrid-background-list" role="list">
+                    <li class="hybrid-background-entry">
+                        <div>
+                            <p class="hybrid-background-date">2026</p>
+                            <h3 data-en="AI research assistant">Assistent de recerca en IA</h3>
+                            <p>SCOPIA · Hospital Universitari Son Espases</p>
+                        </div>
+                        <a class="organization-mark organization-mark-inverse" href="https://www.sonespases.es/ca" hreflang="ca" aria-label="Web de l’Hospital Universitari Son Espases" data-en-label="Hospital Universitari Son Espases website (Catalan)"><img src="/assets/logos/son-espases.png" width="356" height="87" alt="" loading="lazy"></a>
+                    </li>
+                    <li class="hybrid-background-entry">
+                        <div>
+                            <p class="hybrid-background-date">2025–2026</p>
+                            <h3 data-en="Computer vision learning grant">Beca en visió per computador</h3>
+                            <p>Universitat Politècnica de Catalunya (UPC)</p>
+                        </div>
+                        <a class="organization-mark" href="https://www.upc.edu/ca" hreflang="ca" data-en-href="https://www.upc.edu/en" aria-label="Web de la UPC" data-en-label="UPC website"><img src="/assets/logos/upc.svg" width="567" height="170" alt="" loading="lazy"></a>
+                    </li>
+                    <li class="hybrid-background-entry">
+                        <div>
+                            <p class="hybrid-background-date">2024–2025</p>
+                            <h3 data-en="Generative AI evaluator">Avaluador d’IA generativa</h3>
+                            <p>Outlier</p>
+                        </div>
+                        <a class="organization-mark organization-mark-outlier" href="https://outlier.ai/" hreflang="en" aria-label="Web d’Outlier (en anglès)" data-en-label="Outlier website"><img src="/assets/logos/outlier.svg" width="838" height="214" alt="" loading="lazy"></a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <section class="container home-contact" aria-labelledby="parlem">
+            <div>
+                <p class="eyebrow" data-en="Collaboration">Col·laboracions</p>
+                <h2 id="parlem" data-en="Let’s work on a project.">Fem un projecte plegats?</h2>
+                <p data-en="I’m open to collaborating on computer vision and applied AI projects. If you have a concrete problem, let’s talk about how to build and test a first solution.">Estic obert a col·laborar en projectes de visió per computador i IA aplicada. Si tens un repte concret, parlem de com podem construir i provar una primera solució.</p>
             </div>
-            <div class="footer-right">
-                <button id="back-to-top" class="btn-link">Back to top</button>
+            <a class="button button-primary" href="/contacte/"><span data-en="Get in touch">Contacta amb mi</span><span aria-hidden="true">↗</span></a>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-layout">
+            <p>© 2026 Jaume Mora i Ladària</p>
+            <div class="footer-links">
+                <a class="social-link social-linkedin" href="https://www.linkedin.com/in/jaumemil"><img src="/assets/logos/linkedin.svg" width="17" height="17" alt="">LinkedIn</a>
+                <a class="social-link social-github" href="https://github.com/JaumeMiL"><img src="/assets/logos/github.svg" width="17" height="17" alt="">GitHub</a>
+                <a href="/trajectoria/" data-en="Background">Trajectòria</a>
+                <a href="/contacte/" data-en="Contact">Contacte</a>
+                <a href="/old/" data-en="Previous website">Web anterior</a>
             </div>
         </div>
     </footer>
-
-    <!-- Templates for repetitive elements can go here if needed, but we'll generate via JS -->
-
-    <!-- Modal for projects -->
-    <div id="project-modal" class="modal" aria-hidden="true">
-        <div class="modal-overlay" tabindex="-1" data-close="modal"></div>
-        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-            <button class="modal-close" aria-label="Close modal" data-close="modal">&times;</button>
-            <div class="modal-content" id="modal-body">
-                <!-- Injected via JS -->
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js?v=6"></script>
 </body>
-
 </html>

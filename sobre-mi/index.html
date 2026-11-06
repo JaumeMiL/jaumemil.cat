@@ -4,22 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Trajectòria, interessos de recerca i contacte de Jaume Mora i Ladària.">
-    <meta name="robots" content="noindex">
     <title data-en="About — Jaume Mora i Ladària">Sobre mi — Jaume Mora i Ladària</title>
     <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="64x64">
-    <link rel="stylesheet" href="../site.css?v=6">
-    <script src="../site.js?v=6" defer></script>
+    <link rel="stylesheet" href="/site.css?v=1">
+    <script src="/site.js?v=1" defer></script>
 </head>
 <body data-page="sobre-mi">
     <a class="skip-link" href="#contingut" data-en="Skip to content">Ves al contingut</a>
     <header class="site-header">
         <div class="container nav-layout">
-            <a class="brand" href="/proposta/">Jaume</a>
+            <a class="brand" href="/">Jaume</a>
             <nav class="site-nav" id="navegacio" aria-label="Navegació principal" data-en-label="Main navigation">
-                <a href="/proposta/sobre-mi/" aria-current="page" data-en="About">Sobre mi</a>
-                <a class="hybrid-background-link" href="/proposta7/trajectoria/" data-en="Background">Trajectòria</a>
-                <a href="/proposta/projectes/" data-en="Projects">Projectes</a>
-                <a href="/proposta/contacte/" data-en="Contact">Contacte</a>
+                <a href="/sobre-mi/" aria-current="page" data-en="About">Sobre mi</a>
+                <a href="/trajectoria/" data-en="Background">Trajectòria</a>
+                <a href="/projectes/" data-en="Projects">Projectes</a>
+                <a href="/contacte/" data-en="Contact">Contacte</a>
             </nav>
             <div class="nav-controls">
                 <a class="nav-control" href="?lang=en" hreflang="en" lang="en" aria-label="Read in English" data-en-label="Llegeix en català" data-language-toggle data-en="CAT" hidden>EN</a>
@@ -27,7 +26,7 @@
                     <svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.8 15.2A9 9 0 0 1 8.8 3.2 9 9 0 1 0 20.8 15.2Z"/></svg>
                     <svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M19 5l-1.4 1.4M6.4 17.6 5 19"/></svg>
                 </button>
-                <a class="button button-primary nav-cv" href="/proposta/cv/">CV</a>
+                <a class="button button-primary nav-cv" href="/cv/">CV</a>
                 <button class="nav-control" type="button" data-menu-toggle aria-expanded="false" aria-controls="navegacio" aria-label="Menú" data-en-label="Menu" hidden>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
                 </button>
@@ -39,16 +38,16 @@
             <div>
                 <p class="eyebrow" data-en="Computer vision / Barcelona">Visió per computador / Barcelona</p>
                 <h1 data-en="About me">Sobre mi</h1>
-                <p class="page-intro" data-en="I’m Jaume Mora i Ladària, an Artificial Intelligence graduate from UPC and a master’s student in Computer Vision. I’ve worked on medical image analysis, gesture recognition for robotics and teaching materials.">Soc en Jaume Mora i Ladària, graduat en Intel·ligència Artificial per la UPC i estudiant del Màster en Visió per Computador. He treballat en anàlisi d’imatge mèdica, reconeixement de gestos per a robòtica i materials docents.</p>
-                <a class="text-link" href="../cv/"><span data-en="Read my CV">Consulta el CV</span><span aria-hidden="true">↗</span></a>
+                <p class="page-intro" data-en="I’m an AI graduate from UPC and a master’s student in Computer Vision. I’m interested in building systems for real problems and testing where they work and where they fail.">Soc graduat en Intel·ligència Artificial per la UPC i faig el Màster en Visió per Computador. M’interessa construir sistemes per resoldre problemes reals i comprovar quan funcionen i quan fallen.</p>
+                <a class="text-link" href="/cv/"><span data-en="Read my CV">Consulta el CV</span><span aria-hidden="true">↗</span></a>
             </div>
-            <figure class="about-portrait"><img src="../retrat.webp" width="800" height="835" alt="Jaume Mora i Ladària"></figure>
+            <figure class="about-portrait"><img src="/assets/retrat.webp" width="800" height="835" alt="Jaume Mora i Ladària"></figure>
         </header>
 
         <section class="container about-section" aria-labelledby="recerca">
             <div class="about-heading">
-                <p class="eyebrow" data-en="01 / Research interests">01 / Interessos de recerca</p>
-                <h2 id="recerca" data-en="What I want to explore">Què vull explorar</h2>
+                <p class="eyebrow" data-en="01 / Applied computer vision">01 / Visió per computador aplicada</p>
+                <h2 id="recerca" data-en="How I work with models">Com treballo amb els models</h2>
             </div>
             <dl class="research-list">
                 <div><dt data-en="Medical imaging">Imatge mèdica</dt><dd data-en="How do we evaluate a model when errors have different consequences? At SCOPIA and Hospital Universitari Son Espases I studied false negatives, class imbalance and decision thresholds in wound images.">Com avaluem un model quan els errors tenen conseqüències diferents? A SCOPIA i l’Hospital Universitari Son Espases vaig estudiar els falsos negatius, el desequilibri de classes i els llindars de decisió en imatges de ferides.</dd></div>
@@ -67,28 +66,28 @@
                 <p data-en="At UPC I adapted around 30 computer vision labs from MATLAB to Python. I used NumPy, OpenCV and Matplotlib to recreate the exercises and checked the results against the originals. I prepared the material in Catalan, Spanish and English.">A la UPC vaig adaptar unes 30 pràctiques de visió per computador de MATLAB a Python. Vaig refer els exercicis amb NumPy, OpenCV i Matplotlib i en vaig comprovar els resultats amb els originals. Vaig preparar els materials en català, castellà i anglès.</p>
                 <p data-en="For my undergraduate thesis, I took computer vision off the screen and onto a robot. I built a system that uses a camera to recognise hand gestures and sends commands to a TurtleBot3 in real time.">Al treball de final de grau vaig portar la visió per computador de la pantalla al robot. Vaig construir un sistema que reconeix gestos de la mà amb una càmera i envia ordres a un TurtleBot3 en temps real.</p>
                 <div class="button-group">
-                    <a class="text-link" href="../projectes/"><span data-en="See the projects">Veure els projectes</span><span aria-hidden="true">↗</span></a>
-                    <a class="text-link hybrid-background-link" href="/proposta7/trajectoria/"><span data-en="Full background">Trajectòria completa</span><span aria-hidden="true">↗</span></a>
+                    <a class="text-link" href="/projectes/"><span data-en="See the projects">Veure els projectes</span><span aria-hidden="true">↗</span></a>
+                    <a class="text-link" href="/trajectoria/"><span data-en="Full background">Trajectòria completa</span><span aria-hidden="true">↗</span></a>
                 </div>
             </div>
         </section>
 
         <section class="container home-contact" id="contacte" aria-labelledby="contact-title">
             <div>
-                <h2 id="contact-title" data-en="Contact">Contacte</h2>
-                <p data-en="I’m open to research placements and collaboration in computer vision.">Estic obert a estades de recerca i col·laboracions en visió per computador.</p>
+                <h2 id="contact-title" data-en="Have a project in mind?">Tens un projecte en ment?</h2>
+                <p data-en="I’m interested in projects with a concrete problem to solve, where I can build a prototype and test it with real data.">M’interessen els projectes amb un problema concret per resoldre, on pugui construir un prototip i provar-lo amb dades reals.</p>
             </div>
-            <a class="button button-primary" href="../contacte/" data-en="Get in touch">Contacta amb mi</a>
+            <a class="button button-primary" href="/contacte/" data-en="Suggest a project">Proposa’m un projecte</a>
         </section>
     </main>
     <footer class="site-footer">
         <div class="container footer-layout">
             <p>© 2026 Jaume Mora i Ladària</p>
             <div class="footer-links">
-                <a class="social-link social-linkedin" href="https://www.linkedin.com/in/jaumemil"><img src="/proposta/logos/linkedin.svg" width="17" height="17" alt="">LinkedIn</a>
-                <a class="social-link social-github" href="https://github.com/JaumeMiL"><img src="/proposta/logos/github.svg" width="17" height="17" alt="">GitHub</a>
-                <a href="/proposta/contacte/" data-en="Contact">Contacte</a>
-                <a href="/" data-en="Current website">Web actual</a>
+                <a class="social-link social-linkedin" href="https://www.linkedin.com/in/jaumemil"><img src="/assets/logos/linkedin.svg" width="17" height="17" alt="">LinkedIn</a>
+                <a class="social-link social-github" href="https://github.com/JaumeMiL"><img src="/assets/logos/github.svg" width="17" height="17" alt="">GitHub</a>
+                <a href="/contacte/" data-en="Contact">Contacte</a>
+                <a href="/old/" data-en="Previous website">Web anterior</a>
             </div>
         </div>
     </footer>
