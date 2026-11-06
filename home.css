@@ -2,6 +2,19 @@
     gap: clamp(2.25rem, 7vw, 6rem);
 }
 
+.hybrid-hero .hero-copy {
+    container-type: inline-size;
+}
+
+.hybrid-hero h1 {
+    font-size: clamp(2rem, 5vw, 4.75rem);
+    font-size: min(clamp(2.5rem, 6.3vw, 6.2rem), 12.5cqi);
+}
+
+.hybrid-hero h1 span {
+    white-space: nowrap;
+}
+
 .hybrid-portrait {
     position: relative;
     isolation: isolate;
