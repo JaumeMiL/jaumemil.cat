@@ -1,6 +1,11 @@
 const root = document.documentElement;
-const english = new URLSearchParams(location.search).get('lang') === 'en';
+const query = new URLSearchParams(location.search);
+const english = query.get('lang') === 'en';
+const requestedDesign = document.body.dataset.design || query.get('disseny');
+const design = /^[1-6]$/.test(requestedDesign) ? requestedDesign : null;
 const languageToggle = document.querySelector('[data-language-toggle]');
+
+if (design) root.dataset.design = design;
 
 if (english) {
     root.lang = 'en';
@@ -10,32 +15,48 @@ if (english) {
     for (const element of document.querySelectorAll('[data-en-label]')) {
         element.setAttribute('aria-label', element.dataset.enLabel);
     }
+}
+
+if (english || design) {
     for (const link of document.querySelectorAll('a[href]')) {
-        if (link.hasAttribute('data-language-toggle')) continue;
+        if (link === languageToggle || link.getAttribute('href').startsWith('#')) continue;
         const url = new URL(link.href);
-        if (url.origin === location.origin && url.pathname.startsWith('/proposta/') && !link.getAttribute('href').startsWith('#')) {
-            url.searchParams.set('lang', 'en');
-            link.href = url.href;
+        const isProposal = /^\/proposta(?:[1-6]\/|\/(?:cv\/|contacte\/|sobre-mi\/|projectes\/)?)$/.test(url.pathname);
+        if (url.origin !== location.origin || !isProposal) continue;
+        if (design && link.matches('.brand') && url.pathname === '/proposta/') {
+            url.pathname = '/proposta' + design + '/';
+        } else if (design && url.pathname.startsWith('/proposta/') && url.pathname !== '/proposta/') {
+            url.searchParams.set('disseny', design);
         }
+        if (english) url.searchParams.set('lang', 'en');
+        link.href = url.href;
     }
+}
+
+function languageHref() {
+    const url = new URL(location.href);
+    url.searchParams.set('lang', english ? 'ca' : 'en');
+    return url.href;
 }
 
 languageToggle.hidden = false;
 languageToggle.lang = english ? 'ca' : 'en';
 languageToggle.hreflang = languageToggle.lang;
-languageToggle.href = (english ? '?lang=ca' : '?lang=en') + location.hash;
+languageToggle.href = languageHref();
 languageToggle.addEventListener('click', () => {
-    languageToggle.href = (english ? '?lang=ca' : '?lang=en') + location.hash;
+    languageToggle.href = languageHref();
 });
 
 const themeToggle = document.querySelector('[data-theme-toggle]');
+const themeKey = design ? 'proposta' + design + '-theme' : 'proposta-theme';
 let savedTheme;
 try {
-    savedTheme = localStorage.getItem('proposta-theme');
+    savedTheme = localStorage.getItem(themeKey);
 } catch {
     // The theme toggle still works if local storage is unavailable.
 }
-root.dataset.theme = savedTheme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+const preferredTheme = design === '2' || matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+root.dataset.theme = savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : preferredTheme;
 themeToggle.hidden = false;
 themeToggle.setAttribute('aria-pressed', String(root.dataset.theme === 'dark'));
 themeToggle.addEventListener('click', () => {
@@ -43,7 +64,7 @@ themeToggle.addEventListener('click', () => {
     root.dataset.theme = theme;
     themeToggle.setAttribute('aria-pressed', String(theme === 'dark'));
     try {
-        localStorage.setItem('proposta-theme', theme);
+        localStorage.setItem(themeKey, theme);
     } catch {
         // The selected theme applies to the current page.
     }

@@ -11,6 +11,9 @@
     --dark-surface: #1a4035;
     --light: #f8fafc;
     --lime: #bfe8d2;
+    --button-fill: #064e3b;
+    --button-hover: #065f46;
+    --button-ink: var(--light);
     --anchor-clearance: 7.1rem;
     --display: "Playfair Display", "Merriweather", Georgia, serif;
     --sans: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -27,6 +30,9 @@
     --soft: #192e24;
     --dark: #0b1b15;
     --dark-surface: #173429;
+    --button-fill: var(--lime);
+    --button-hover: #def5e8;
+    --button-ink: var(--paper);
 }
 *, *::before, *::after { box-sizing: border-box; }
 body { margin: 0; background: var(--paper); color: var(--ink); line-height: 1.65; }
@@ -126,13 +132,11 @@ h3 { font-size: clamp(1.55rem, 2.8vw, 2.15rem); }
     text-decoration: none;
     cursor: pointer;
 }
-.button-primary { color: var(--light); background: #064e3b; }
-.button-primary:hover { background: #065f46; }
+.button-primary { color: var(--button-ink); background: var(--button-fill); }
+.button-primary:hover { background: var(--button-hover); }
 .button-primary:focus-visible { outline-color: var(--ink); }
 .button-secondary { border-color: var(--line); color: var(--ink); background: var(--surface); }
 .button-secondary:hover { border-color: var(--accent); background: var(--soft); }
-[data-theme="dark"] .button-primary { color: #183628; background: var(--lime); }
-[data-theme="dark"] .button-primary:hover { background: #f2f8dc; }
 .text-link { display: inline-flex; width: fit-content; align-items: baseline; gap: .6rem; color: var(--accent); font-weight: 650; text-decoration: underline; }
 .text-link:hover { text-decoration-thickness: 2px; }
 
@@ -340,4 +344,141 @@ h3 { font-size: clamp(1.55rem, 2.8vw, 2.15rem); }
 }
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { transition: none !important; }
+}
+
+/* Keep the selected design when opening the shared pages. */
+:root[data-design] {
+    --button-fill: var(--accent);
+    --button-hover: color-mix(in srgb, var(--button-fill) 90%, var(--ink));
+}
+:root[data-design="1"] {
+    --paper: #fafaff;
+    --surface: #ffffff;
+    --ink: #191b39;
+    --muted: #525675;
+    --line: #d4d6e9;
+    --soft: #efeffb;
+    --accent: #4547aa;
+    --light: #ffffff;
+    --display: Georgia, "Times New Roman", serif;
+}
+:root[data-design="1"][data-theme="dark"] {
+    --paper: #171828;
+    --surface: #202239;
+    --ink: #f2f1ff;
+    --muted: #c7c9e3;
+    --line: #464967;
+    --soft: #292c49;
+    --accent: #c9caff;
+}
+:root[data-design="2"] {
+    --paper: #eff4f6;
+    --surface: #f8fbfc;
+    --ink: #142832;
+    --muted: #3a555f;
+    --line: #bccdd4;
+    --soft: #e2edf0;
+    --accent: #006b63;
+    --light: #eff7fb;
+    --display: var(--sans);
+}
+:root[data-design="2"][data-theme="dark"] {
+    --paper: #111923;
+    --surface: #162331;
+    --ink: #eff7fb;
+    --muted: #bacad7;
+    --line: #344a5d;
+    --soft: #1d2c3a;
+    --accent: #8bf1d7;
+}
+:root[data-design="3"] {
+    --paper: #f5f5f2;
+    --surface: #fbfbf8;
+    --ink: #181818;
+    --muted: #52524e;
+    --line: #cacac3;
+    --accent: #20201d;
+    --soft: #e9e9e4;
+    --dark: #222220;
+    --dark-surface: #343432;
+    --light: #f8f8f4;
+    --lime: #e9e9e4;
+    --display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+:root[data-design="3"][data-theme="dark"] {
+    --paper: #191919;
+    --surface: #212120;
+    --ink: #f6f6f0;
+    --muted: #bdbdb6;
+    --line: #51514d;
+    --accent: #efefe7;
+    --soft: #292928;
+    --dark: #181818;
+    --dark-surface: #262625;
+}
+:root[data-design="4"] {
+    --paper: #fbf4ea;
+    --surface: #fffaf3;
+    --ink: #38262e;
+    --muted: #6a4f58;
+    --line: #e5cfc8;
+    --accent: #913f4a;
+    --soft: #f1e1de;
+    --dark: #512b3d;
+    --dark-surface: #63394b;
+    --light: #fff6ed;
+    --lime: #f8cdbe;
+    --display: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+}
+:root[data-design="4"][data-theme="dark"] {
+    --paper: #241b21;
+    --surface: #32252c;
+    --ink: #fff2e9;
+    --muted: #e1c3ca;
+    --line: #654a55;
+    --accent: #f3b9b1;
+    --soft: #3e2c36;
+    --dark: #4f3041;
+    --dark-surface: #5c3b4e;
+}
+:root[data-design="5"] {
+    --paper: #f6f4ec;
+    --surface: #fffdf6;
+    --ink: #1a2944;
+    --muted: #4e5d73;
+    --line: #ccd1d7;
+    --accent: #2d4e93;
+    --soft: #e7ecf5;
+    --lime: #bed0fa;
+    --display: Georgia, "Times New Roman", serif;
+}
+:root[data-design="5"][data-theme="dark"] {
+    --paper: #151c2a;
+    --surface: #1b2638;
+    --ink: #f3f1e9;
+    --muted: #bac6da;
+    --line: #45546b;
+    --accent: #bed0fa;
+    --soft: #26344d;
+}
+:root[data-design="6"] {
+    --paper: #f2faf8;
+    --surface: #fbfefc;
+    --ink: #132e2b;
+    --muted: #405a55;
+    --line: #a6c6bf;
+    --accent: #00634e;
+    --soft: #daf0e9;
+    --lime: #b9f0d9;
+    --display: var(--sans);
+}
+:root[data-design="6"][data-theme="dark"] {
+    --paper: #10211e;
+    --surface: #142b25;
+    --ink: #e9fcf4;
+    --muted: #bbd4cd;
+    --line: #44675f;
+    --accent: #a0eac9;
+    --soft: #1c382f;
 }
