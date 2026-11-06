@@ -7,8 +7,8 @@
     <meta name="description" content="Projectes de Jaume Mora i Ladària en imatge mèdica, robòtica i intel·ligència artificial aplicada.">
     <title data-en="Projects — Jaume Mora i Ladària">Projectes — Jaume Mora i Ladària</title>
     <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="64x64">
-    <link rel="stylesheet" href="../site.css?v=5">
-    <script src="../site.js?v=5" defer></script>
+    <link rel="stylesheet" href="../site.css?v=6">
+    <script src="../site.js?v=6" defer></script>
 </head>
 <body data-page="projectes">
     <a class="skip-link" href="#contingut" data-en="Skip to content">Ves al contingut</a>
@@ -17,6 +17,7 @@
             <a class="brand" href="/proposta/">Jaume</a>
             <nav class="site-nav" id="navegacio" aria-label="Navegació principal" data-en-label="Main navigation">
                 <a href="/proposta/sobre-mi/" data-en="About">Sobre mi</a>
+                <a class="hybrid-background-link" href="/proposta7/trajectoria/" data-en="Background">Trajectòria</a>
                 <a href="/proposta/projectes/" aria-current="page" data-en="Projects">Projectes</a>
                 <a href="/proposta/contacte/" data-en="Contact">Contacte</a>
             </nav>
@@ -45,7 +46,7 @@
                 <div>
                     <p class="eyebrow" data-en="01 / Medical imaging · 2026">01 / Imatge mèdica · 2026</p>
                     <h2 id="redscar-title">REDSCAR</h2>
-                    <p data-en="Can a photograph help identify signs of infection in a surgical wound? I worked on this research question as a research assistant with SCOPIA at the University of the Balearic Islands and Hospital Universitari Son Espases.">Pot una fotografia ajudar a detectar signes d’infecció en una ferida quirúrgica? Vaig treballar en aquesta pregunta com a assistent de recerca amb SCOPIA (Universitat de les Illes Balears) i l’Hospital Universitari Son Espases.</p>
+                    <p data-en="Can a photograph help identify signs of infection in a surgical wound? I worked on this question as a research assistant in computer vision and multimodal deep learning with SCOPIA at the University of the Balearic Islands and Hospital Universitari Son Espases.">Pot una fotografia ajudar a detectar signes d’infecció en una ferida quirúrgica? Vaig treballar en aquesta pregunta com a assistent de recerca en visió per computador i aprenentatge profund multimodal amb SCOPIA (Universitat de les Illes Balears) i l’Hospital Universitari Son Espases.</p>
                 </div>
                 <figure class="project-visual project-visual-redscar">
                     <img src="/assets/project-redscar.png" alt="" width="422" height="292" decoding="async">
@@ -74,9 +75,14 @@
                 </section>
                 <section>
                     <h3 data-en="What I evaluated">Què vaig avaluar</h3>
-                    <p data-en="I studied how the decision threshold affected missed infections and false alarms in an imbalanced dataset. I also explored how clinical questionnaire responses could complement image predictions.">Vaig estudiar com el llindar de decisió afectava les infeccions que el model deixava passar i les falses alarmes, en un conjunt de dades desequilibrat. També vaig explorar com les respostes al qüestionari clínic podien complementar les prediccions a partir de les imatges.</p>
+                    <p data-en="I studied how the decision threshold affected missed infections and false alarms in an imbalanced dataset. I also explored how clinical questionnaire responses could complement image predictions and how to calibrate model scores after training.">Vaig estudiar com el llindar de decisió afectava les infeccions que el model deixava passar i les falses alarmes, en un conjunt de dades desequilibrat. També vaig explorar com les respostes al qüestionari clínic podien complementar les prediccions a partir de les imatges i com calibrar les puntuacions del model després de l’entrenament.</p>
                 </section>
             </div>
+
+            <details class="project-detail">
+                <summary data-en="Public report and data access">Informe públic i accés a les dades</summary>
+                <p data-en="The public report describes the project. Access to the repository, data, clinical materials and internal results is restricted to protect clinical confidentiality. I’m happy to discuss the scope, methodology and my contribution.">L’informe públic descriu el projecte. L’accés al repositori, les dades, els materials clínics i els resultats interns és restringit per protegir la confidencialitat clínica. Puc explicar l’abast, la metodologia i la meva aportació en una conversa.</p>
+            </details>
 
             <div class="project-links">
                 <a class="button button-primary" href="/assets/JaumeMora_Informe_Redscar-v2.pdf" data-en="Read the public report (PDF)">Llegir l’informe públic (PDF)</a>
@@ -97,6 +103,11 @@
                         <h3 id="robot-title" data-en="Controlling a robot with hand gestures">Controlar un robot amb gestos</h3>
                         <p data-en="I built a real-time control system for a TurtleBot3 Waffle Pi. MediaPipe tracked hand landmarks, EurekaNet classified the gestures and ROS 2 relayed the commands to the robot.">Vaig construir un sistema per controlar un TurtleBot3 Waffle Pi en temps real. MediaPipe detectava els punts clau de la mà, EurekaNet classificava el gest i ROS 2 enviava l’ordre al robot.</p>
                         <p class="project-note" data-en="600 trials across 10 gestures · Thesis grade 9.5/10">600 assajos amb 10 gestos · Nota del TFG 9,5/10</p>
+                        <details class="project-detail">
+                            <summary data-en="How it works and how I tested it">Com funciona i com ho vaig provar</summary>
+                            <p data-en="I implemented the teleoperation workflow in Python, from camera capture to robot control. MediaPipe extracted 21 hand landmarks and EurekaNet classified the gestures after training on the IPN Hand dataset.">Vaig implementar el flux de teleoperació en Python, des de la captura amb càmera fins al control del robot. MediaPipe extreia 21 punts de la mà i EurekaNet, entrenat amb el conjunt de dades IPN Hand, classificava els gestos.</p>
+                            <p data-en="The perceived latency over Wi-Fi was around 200–300 ms. The system used confidence thresholds, voting across successive frames, gesture locking, emergency-stop gestures and LiDAR checks.">La latència percebuda per Wi-Fi era d’uns 200–300 ms. El sistema aplicava llindars de confiança, votació entre fotogrames consecutius, bloqueig de gestos, gestos d’aturada d’emergència i comprovacions amb LiDAR.</p>
+                        </details>
                         <div class="project-links">
                             <a class="button button-secondary" href="https://hdl.handle.net/2117/460251" data-en="Read the thesis at UPC">Llegir el TFG a la UPC</a>
                             <a href="https://github.com/JaumeMiL/computer_vision_robot_skills_tfg" data-en="Code on GitHub">Codi a GitHub</a>
@@ -111,8 +122,8 @@
                     <div class="project-card-body">
                         <p class="eyebrow" data-en="03 / Team project · Datathon FME 2025">03 / Projecte en equip · Datathon FME 2025</p>
                         <h3 id="aider-title">aiDER Assistant</h3>
-                        <p data-en="My team built a prototype that estimates the likelihood of closing a sale and explains which factors drive the prediction. A chat interface lets users ask about opportunities in everyday language.">Amb el meu equip vam construir un prototip que estima la probabilitat de tancar una venda i explica quins factors pesen en la predicció. Amb la interfície de xat es poden fer preguntes sobre les oportunitats en llenguatge planer.</p>
-                        <p class="project-note">Python · XGBoost · Gemini</p>
+                        <p data-en="I co-developed a prototype that estimates the likelihood of closing a sale and explains which factors drive the prediction. A chat interface lets users ask about opportunities in everyday language.">Vaig desenvolupar amb el meu equip un prototip que estima la probabilitat de tancar una venda i explica quins factors pesen en la predicció. Amb la interfície de xat es poden fer preguntes sobre les oportunitats en llenguatge planer.</p>
+                        <p class="project-note">Python · Jupyter Notebook · XGBoost · Gemini · Google Cloud</p>
                         <div class="project-links">
                             <a class="button button-secondary" href="https://github.com/JaumeMiL/aider_assistant" data-en="Explore the aiDER code">Veure el codi d’aiDER</a>
                             <a href="https://devpost.com/software/aider-assistant" data-en="Project on Devpost">Projecte a Devpost</a>

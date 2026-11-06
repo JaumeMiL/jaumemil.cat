@@ -78,6 +78,73 @@
     background: #f8f8f6;
 }
 
+.hybrid-background {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5rem clamp(1.5rem, 5vw, 4rem);
+}
+
+.hybrid-background .section-heading {
+    align-items: baseline;
+    margin-bottom: 1.1rem;
+}
+
+.hybrid-background-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.hybrid-background-list li {
+    min-height: 6.7rem;
+    padding-block: .8rem;
+    border-top: 1px solid var(--line);
+}
+
+.hybrid-background-list h3 {
+    margin: .22rem 0 .3rem;
+    font: 700 1rem/1.35 var(--sans);
+    letter-spacing: normal;
+    text-wrap: wrap;
+}
+
+.hybrid-background-list p {
+    margin: 0;
+    color: var(--muted);
+    font-size: .88rem;
+}
+
+.hybrid-background-list .hybrid-background-date {
+    color: var(--accent);
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+.hybrid-background-entry {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: .85rem;
+}
+
+.hybrid-background-entry .organization-mark {
+    min-height: 2rem;
+    padding: .25rem;
+}
+
+.hybrid-background-entry .organization-mark img {
+    width: 5.2rem;
+    height: 1.4rem;
+}
+
+.hybrid-background-entry .organization-mark-outlier img {
+    width: 3.5rem;
+}
+
+.hybrid-background-entry .hybrid-education-mark img {
+    height: 2.15rem;
+}
+
 @media (max-width: 63rem) {
     .hybrid-secondary {
         grid-template-columns: minmax(0, 1fr);
@@ -93,7 +160,8 @@
         width: min(94%, 22rem);
     }
 
-    .hybrid-work-grid {
+    .hybrid-work-grid,
+    .hybrid-background {
         grid-template-columns: minmax(0, 1fr);
     }
 

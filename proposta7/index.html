@@ -7,9 +7,9 @@
     <meta name="robots" content="noindex">
     <title data-en="Jaume Mora i Ladària — Computer vision">Jaume Mora i Ladària — Visió per computador</title>
     <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="64x64">
-    <link rel="stylesheet" href="/proposta/site.css?v=5">
-    <link rel="stylesheet" href="style.css">
-    <script src="/proposta/site.js?v=5" defer></script>
+    <link rel="stylesheet" href="/proposta/site.css?v=6">
+    <link rel="stylesheet" href="style.css?v=2">
+    <script src="/proposta/site.js?v=6" defer></script>
 </head>
 <body data-page="inici" data-design="7">
     <a class="skip-link" href="#contingut" data-en="Skip to content">Ves al contingut</a>
@@ -18,6 +18,7 @@
             <a class="brand" href="/proposta7/" aria-current="page">Jaume</a>
             <nav class="site-nav" id="navegacio" aria-label="Navegació principal" data-en-label="Main navigation">
                 <a href="/proposta/sobre-mi/?disseny=7" data-en="About">Sobre mi</a>
+                <a href="/proposta7/trajectoria/" data-en="Background">Trajectòria</a>
                 <a href="/proposta/projectes/?disseny=7" data-en="Projects">Projectes</a>
                 <a href="/proposta/contacte/?disseny=7" data-en="Contact">Contacte</a>
             </nav>
@@ -112,19 +113,73 @@
             </div>
         </section>
 
-        <section class="container home-organizations" aria-labelledby="trajectoria">
-            <div class="section-heading">
-                <div>
-                    <h2 id="trajectoria" data-en="Education and experience">Trajectòria</h2>
+        <div class="container home-organizations hybrid-background">
+            <section aria-labelledby="formacio">
+                <div class="section-heading">
+                    <h2 id="formacio" data-en="Education">Formació</h2>
+                    <a class="text-link" href="/proposta7/trajectoria/#formacio"><span data-en="Full education history">Tota la formació</span><span aria-hidden="true">↗</span></a>
                 </div>
-                <a class="text-link" href="/proposta/cv/?disseny=7"><span data-en="See my experience">Veure la trajectòria</span><span aria-hidden="true">↗</span></a>
-            </div>
-            <ul class="organization-list" role="list">
-                <li><span class="organization-mark"><img src="/proposta/logos/upc.svg" width="567" height="170" alt="" loading="lazy"></span><span>Universitat Politècnica de Catalunya</span></li>
-                <li><span class="organization-mark organization-mark-inverse"><img src="/proposta/logos/son-espases.png" width="356" height="87" alt="" loading="lazy"></span><span>Hospital Universitari Son Espases</span></li>
-                <li><span class="organization-mark organization-mark-outlier"><img src="/proposta/logos/outlier.svg" width="838" height="214" alt="" loading="lazy"></span><span>Outlier</span></li>
-            </ul>
-        </section>
+                <ul class="hybrid-background-list" role="list">
+                    <li class="hybrid-background-entry">
+                        <div>
+                            <p class="hybrid-background-date" data-en="September 2026–present">Setembre de 2026–actualitat</p>
+                            <h3 data-en="MSc in Computer Vision">Màster en Visió per Computador</h3>
+                            <p data-en="Joint programme at UAB, UB, UPC, UPF and UOC">Màster interuniversitari de la UAB, UB, UPC, UPF i UOC</p>
+                        </div>
+                        <span class="organization-mark hybrid-education-mark"><img src="/proposta7/logos/mcv.png" width="300" height="155" alt="" loading="lazy"></span>
+                    </li>
+                    <li class="hybrid-background-entry">
+                        <div>
+                            <p class="hybrid-background-date">2022–2026</p>
+                            <h3 data-en="BSc in Artificial Intelligence">Grau en Intel·ligència Artificial</h3>
+                            <p>Universitat Politècnica de Catalunya (UPC)</p>
+                        </div>
+                        <span class="organization-mark"><img src="/proposta/logos/upc.svg" width="567" height="170" alt="" loading="lazy"></span>
+                    </li>
+                    <li class="hybrid-background-entry">
+                        <div>
+                            <p class="hybrid-background-date">2020–2022</p>
+                            <h3 data-en="Science and Technology Baccalaureate">Batxillerat científic i tecnològic</h3>
+                            <p>IES Llorenç Garcías i Font</p>
+                        </div>
+                        <span class="organization-mark hybrid-education-mark"><img src="/proposta7/logos/ies-arta.png" width="192" height="192" alt="" loading="lazy"></span>
+                    </li>
+                </ul>
+            </section>
+
+            <section aria-labelledby="trajectoria">
+                <div class="section-heading">
+                    <h2 id="trajectoria" data-en="Experience">Trajectòria</h2>
+                    <a class="text-link" href="/proposta7/trajectoria/#experiencia"><span data-en="Full work history">Tota l’experiència</span><span aria-hidden="true">↗</span></a>
+                </div>
+                <ul class="hybrid-background-list" role="list">
+                    <li class="hybrid-background-entry">
+                        <div>
+                            <p class="hybrid-background-date">2026</p>
+                            <h3 data-en="AI research assistant">Assistent de recerca en IA</h3>
+                            <p>SCOPIA · Hospital Universitari Son Espases</p>
+                        </div>
+                        <span class="organization-mark organization-mark-inverse"><img src="/proposta/logos/son-espases.png" width="356" height="87" alt="" loading="lazy"></span>
+                    </li>
+                    <li class="hybrid-background-entry">
+                        <div>
+                            <p class="hybrid-background-date">2025–2026</p>
+                            <h3 data-en="Computer vision learning grant">Beca en visió per computador</h3>
+                            <p>Universitat Politècnica de Catalunya (UPC)</p>
+                        </div>
+                        <span class="organization-mark"><img src="/proposta/logos/upc.svg" width="567" height="170" alt="" loading="lazy"></span>
+                    </li>
+                    <li class="hybrid-background-entry">
+                        <div>
+                            <p class="hybrid-background-date">2024–2025</p>
+                            <h3 data-en="Generative AI evaluator">Avaluador d’IA generativa</h3>
+                            <p>Outlier</p>
+                        </div>
+                        <span class="organization-mark organization-mark-outlier"><img src="/proposta/logos/outlier.svg" width="838" height="214" alt="" loading="lazy"></span>
+                    </li>
+                </ul>
+            </section>
+        </div>
 
         <section class="container home-contact" aria-labelledby="parlem">
             <div>
@@ -141,6 +196,7 @@
             <div class="footer-links">
                 <a class="social-link social-linkedin" href="https://www.linkedin.com/in/jaumemil"><img src="/proposta/logos/linkedin.svg" width="17" height="17" alt="">LinkedIn</a>
                 <a class="social-link social-github" href="https://github.com/JaumeMiL"><img src="/proposta/logos/github.svg" width="17" height="17" alt="">GitHub</a>
+                <a href="/proposta7/trajectoria/" data-en="Background">Trajectòria</a>
                 <a href="/proposta/contacte/?disseny=7" data-en="Contact">Contacte</a>
                 <a href="/" data-en="Current website">Web actual</a>
             </div>

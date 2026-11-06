@@ -21,7 +21,8 @@ if (english || design) {
     for (const link of document.querySelectorAll('a[href]')) {
         if (link === languageToggle || link.getAttribute('href').startsWith('#')) continue;
         const url = new URL(link.href);
-        const isProposal = /^\/proposta(?:[1-7]\/|\/(?:cv\/|contacte\/|sobre-mi\/|projectes\/)?)$/.test(url.pathname);
+        const isProposal = url.pathname === '/proposta7/trajectoria/'
+            || /^\/proposta(?:[1-7]\/|\/(?:cv\/|contacte\/|sobre-mi\/|projectes\/)?)$/.test(url.pathname);
         if (url.origin !== location.origin || !isProposal) continue;
         if (design && link.matches('.brand') && url.pathname === '/proposta/') {
             url.pathname = '/proposta' + design + '/';
