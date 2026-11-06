@@ -7,19 +7,19 @@
     <meta name="description" content="Currículum de Jaume Mora i Ladària. Experiència de recerca en imatge mèdica, visió per computador i aprenentatge profund.">
     <title data-en="CV — Jaume Mora i Ladària">Currículum — Jaume Mora i Ladària</title>
     <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="64x64">
-    <link rel="stylesheet" href="../site.css?v=2">
-    <script src="../site.js" defer></script>
+    <link rel="stylesheet" href="../site.css?v=3">
+    <link rel="stylesheet" href="cv.css">
+    <script src="../site.js?v=3" defer></script>
 </head>
 <body data-page="cv">
     <a class="skip-link" href="#contingut" data-en="Skip to content">Ves al contingut</a>
     <header class="site-header">
         <div class="container nav-layout">
-            <a class="brand" href="/proposta/"><img src="/assets/favicon.png" width="34" height="34" alt="">Jaume</a>
-            <nav class="site-nav" aria-label="Navegació principal" data-en-label="Main navigation">
-                <a href="/proposta/" data-en="Home">Inici</a>
-                <a href="/proposta/projectes/" data-en="Projects">Projectes</a>
+            <a class="brand" href="/proposta/">Jaume</a>
+            <nav class="site-nav" id="navegacio" aria-label="Navegació principal" data-en-label="Main navigation">
                 <a href="/proposta/sobre-mi/" data-en="About">Sobre mi</a>
-                <a href="/proposta/cv/" aria-current="page" data-en="CV">CV</a>
+                <a href="/proposta/projectes/" data-en="Projects">Projectes</a>
+                <a href="/proposta/contacte/" data-en="Contact">Contacte</a>
             </nav>
             <div class="nav-controls">
                 <a class="nav-control" href="?lang=en" hreflang="en" lang="en" aria-label="Read in English" data-en-label="Llegeix en català" data-language-toggle data-en="CAT" hidden>EN</a>
@@ -27,125 +27,108 @@
                     <svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.8 15.2A9 9 0 0 1 8.8 3.2 9 9 0 1 0 20.8 15.2Z"/></svg>
                     <svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M19 5l-1.4 1.4M6.4 17.6 5 19"/></svg>
                 </button>
+                <a class="button button-primary nav-cv" href="/proposta/cv/" aria-current="page">CV</a>
+                <button class="nav-control" type="button" data-menu-toggle aria-expanded="false" aria-controls="navegacio" aria-label="Menú" data-en-label="Menu" hidden>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+                </button>
             </div>
         </div>
     </header>
-    <main id="contingut">
-        <section class="page-hero">
-            <div class="container">
-                <p class="eyebrow" data-en="Profile &amp; experience">Perfil i trajectòria</p>
-                <h1 data-en="Curriculum vitae">Currículum</h1>
-                <p class="page-intro" data-en="Research experience, education and technical skills. Read the CV below or open the full document in English.">Experiència de recerca, formació i competències tècniques. Consulta el CV aquí mateix o obre el document complet en anglès.</p>
-                <div class="cv-actions">
-                    <a class="button button-primary" href="/assets/Jaume_Mora_Research_CV.pdf" target="_blank" rel="noopener" data-cv-pdf data-en="Open PDF ↗">Obre el PDF ↗</a>
-                    <a class="button button-secondary" href="/assets/Jaume_Mora_Research_CV.pdf" download data-en="Download PDF ↓">Descarrega el PDF ↓</a>
+    <main id="contingut" class="cv-page">
+        <header class="container cv-heading">
+            <p class="eyebrow">Jaume Mora i Ladària</p>
+            <h1 data-en="Curriculum vitae">Currículum</h1>
+            <p class="cv-heading-detail" data-en="Computer vision, medical imaging and deep learning">Visió per computador, imatge mèdica i aprenentatge profund</p>
+        </header>
+
+        <section class="container cv-document" aria-labelledby="cv-document-title">
+            <div class="cv-document-panel">
+                <div class="cv-document-bar">
+                    <div>
+                        <h2 id="cv-document-title" data-en="Research CV">CV de recerca</h2>
+                        <p data-en="PDF · 2 pages · English">PDF · 2 pàgines · Anglès</p>
+                    </div>
+                    <div class="button-group">
+                        <a class="button button-primary" href="/assets/Jaume_Mora_Research_CV.pdf" target="_blank" rel="noopener"><span data-en="Open PDF">Obre el PDF</span><span aria-hidden="true">↗</span></a>
+                        <a class="button button-secondary" href="/assets/Jaume_Mora_Research_CV.pdf" download><span data-en="Download PDF">Descarrega el PDF</span><span aria-hidden="true">↓</span></a>
+                    </div>
                 </div>
-                <p class="cv-file" data-en="PDF in English · 2 pages · 227 KB">PDF en anglès · 2 pàgines · 227 kB</p>
-                <details class="pdf-preview" data-pdf-preview hidden>
-                    <summary><span data-en="Preview the PDF here">Previsualitza el PDF aquí</span></summary>
-                    <p class="pdf-fallback"><a href="/assets/Jaume_Mora_Research_CV.pdf" target="_blank" rel="noopener" data-en="Open the PDF in a separate tab">Obre el PDF en una pestanya a part</a></p>
-                </details>
+                <div class="cv-preview">
+                    <div class="cv-preview-bar">
+                        <p data-en="Document preview">Previsualització del document</p>
+                        <a href="#cv-resum" data-en="Skip to text summary ↓">Ves al resum en text ↓</a>
+                    </div>
+                    <ol class="cv-preview-pages">
+                        <li>
+                            <a class="cv-preview-page" href="/assets/Jaume_Mora_Research_CV.pdf#page=1" target="_blank" rel="noopener">
+                                <img src="cv-page-1.webp" width="1080" height="1528" alt="">
+                                <span><span data-en="Open page 1 of 2">Obre la pàgina 1 de 2</span><span aria-hidden="true">↗</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="cv-preview-page" href="/assets/Jaume_Mora_Research_CV.pdf#page=2" target="_blank" rel="noopener">
+                                <img src="cv-page-2.webp" width="1080" height="1528" alt="" loading="lazy">
+                                <span><span data-en="Open page 2 of 2">Obre la pàgina 2 de 2</span><span aria-hidden="true">↗</span></span>
+                            </a>
+                        </li>
+                    </ol>
+                </div>
             </div>
         </section>
 
-        <div class="container cv-container">
-            <article class="cv-paper" aria-labelledby="cv-name">
-                <header class="cv-intro">
-                    <p class="eyebrow" data-en="Web version · Barcelona, Catalonia">Versió web · Barcelona, Catalunya</p>
-                    <h2 id="cv-name">Jaume Mora i Ladària</h2>
-                    <p class="cv-role" data-en="MSc in Computer Vision · Medical imaging &amp; deep learning">Màster en Visió per Computador · Imatge mèdica i aprenentatge profund</p>
-                    <p data-en="I work on computer vision for medical imaging, from training models to analysing their errors. My research interests include Vision Transformers, foundation models, multimodal learning and reliable clinical AI.">Treballo en visió per computador aplicada a la imatge mèdica, des de l’entrenament de models fins a l’anàlisi dels errors. M’interessen els Vision Transformers, els models fundacionals, l’aprenentatge multimodal i la IA clínica fiable.</p>
-                </header>
-
-                <div class="cv-layout">
-                    <div class="cv-main">
-                        <section class="cv-section" aria-labelledby="cv-experience">
-                            <h3 id="cv-experience" data-en="Research and technical experience">Experiència de recerca i tècnica</h3>
-                            <div class="cv-entry">
-                                <p class="cv-date" data-en="June–August 2026">Juny–agost de 2026</p>
-                                <h4 data-en="AI &amp; Multimodal Machine Learning Research Assistant">Assistent de recerca en IA i aprenentatge multimodal</h4>
-                                <p class="cv-organisation">
-                                    <span class="cv-organization-marks">
-                                        <img class="cv-mark-inverse" src="../logos/son-espases.png" alt="" width="356" height="87" loading="lazy">
-                                        <img src="../logos/uib.png" alt="" width="828" height="264" loading="lazy">
-                                    </span>
-                                    <span data-en="SCOPIA · Hospital Universitari Son Espases and UIB">SCOPIA · Hospital Universitari Son Espases i UIB</span>
-                                </p>
-                                <p data-en="Built a PyTorch pipeline to classify infection in 394 wound images, compared eight CNN and Transformer architectures, and studied false negatives, class imbalance and the use of clinical questionnaire data.">Vaig desenvolupar un pipeline en PyTorch per classificar infeccions en 394 imatges de ferides, comparar vuit arquitectures CNN i Transformer i estudiar els falsos negatius, el desequilibri de classes i l’ús de dades de qüestionaris clínics.</p>
-                                <a class="cv-link" href="../projectes/#redscar" data-en="See the REDSCAR project →">Veure el projecte REDSCAR →</a>
+        <section id="cv-resum" class="container cv-overview" aria-labelledby="cv-overview-title">
+            <h2 id="cv-overview-title" data-en="Career at a glance">Trajectòria en breu</h2>
+            <div class="cv-overview-columns">
+                <section aria-labelledby="cv-overview-experience">
+                    <h3 id="cv-overview-experience" data-en="Experience">Experiència</h3>
+                    <ul class="cv-overview-list">
+                        <li class="cv-overview-role">
+                            <span class="cv-overview-logo cv-overview-logo-inverse"><img src="../logos/son-espases.png" width="356" height="87" alt="" loading="lazy"></span>
+                            <div>
+                                <p class="cv-overview-name" data-en="SCOPIA · Hospital Universitari Son Espases and UIB">SCOPIA · Hospital Universitari Son Espases i UIB</p>
+                                <p data-en="AI and multimodal learning research assistant · 2026">Assistent de recerca en IA i aprenentatge multimodal · 2026</p>
                             </div>
-                            <div class="cv-entry">
-                                <p class="cv-date" data-en="September 2025–June 2026">Setembre de 2025–juny de 2026</p>
-                                <h4 data-en="Learning Grant Student · Python &amp; Computer Vision">Becari en visió per computador</h4>
-                                <p class="cv-organisation">
-                                    <span class="cv-organization-marks"><img src="../logos/upc.svg" alt="" width="567" height="170" loading="lazy"></span>
-                                    <span>Universitat Politècnica de Catalunya</span>
-                                </p>
-                                <p data-en="Migrated around 30 computer vision labs from MATLAB to Python using NumPy, OpenCV and Matplotlib, and maintained around 90 versions in Catalan, Spanish and English.">Vaig migrar una trentena de pràctiques de visió per computador de MATLAB a Python amb NumPy, OpenCV i Matplotlib, i en vaig mantenir unes 90 versions en català, castellà i anglès.</p>
+                        </li>
+                        <li class="cv-overview-role">
+                            <span class="cv-overview-logo"><img src="../logos/upc.svg" width="567" height="170" alt="" loading="lazy"></span>
+                            <div>
+                                <p class="cv-overview-name">Universitat Politècnica de Catalunya</p>
+                                <p data-en="Computer vision learning grant · 2025–2026">Beca en visió per computador · 2025–2026</p>
                             </div>
-                            <div class="cv-entry">
-                                <p class="cv-date" data-en="November 2024–January 2025">Novembre de 2024–gener de 2025</p>
-                                <h4 data-en="Generative AI Evaluator">Avaluador d’IA generativa</h4>
-                                <p class="cv-organisation">
-                                    <span class="cv-organization-marks"><img src="../logos/outlier.svg" alt="" width="838" height="214" loading="lazy"></span>
-                                    <span>Outlier</span>
-                                </p>
-                                <p data-en="Evaluated language model responses for factual accuracy, reasoning and instruction following. Analysed recurring failures such as unsupported claims, contradictions and incomplete reasoning.">Vaig avaluar la precisió factual, el raonament i el seguiment d’instruccions de les respostes de models de llenguatge. Vaig analitzar errors recurrents com les afirmacions sense suport, les contradiccions i el raonament incomplet.</p>
+                        </li>
+                        <li class="cv-overview-role">
+                            <span class="cv-overview-logo cv-overview-logo-outlier"><img src="../logos/outlier.svg" width="838" height="214" alt="" loading="lazy"></span>
+                            <div>
+                                <p class="cv-overview-name">Outlier</p>
+                                <p data-en="Generative AI evaluator · 2024–2025">Avaluador d’IA generativa · 2024–2025</p>
                             </div>
-                        </section>
+                        </li>
+                    </ul>
+                </section>
 
-                        <section class="cv-section" aria-labelledby="cv-education">
-                            <h3 id="cv-education" data-en="Education">Formació</h3>
-                            <div class="cv-entry">
-                                <p class="cv-date" data-en="September 2026–present">Setembre de 2026–actualitat</p>
-                                <h4 data-en="MSc in Computer Vision">Màster en Visió per Computador</h4>
-                                <p class="cv-organisation" data-en="UAB, UB, UPC, UPF and UOC">UAB, UB, UPC, UPF i UOC</p>
-                                <p data-en="Interuniversity programme of 60 ECTS taught in English, focused on computer vision, deep learning, image analysis and research methods.">Programa interuniversitari de 60 ECTS, impartit en anglès, centrat en visió per computador, aprenentatge profund, anàlisi d’imatges i metodologia de recerca.</p>
-                            </div>
-                            <div class="cv-entry">
-                                <p class="cv-date">2022–2026</p>
-                                <h4 data-en="BSc in Artificial Intelligence">Grau en Intel·ligència Artificial</h4>
-                                <p class="cv-organisation">Universitat Politècnica de Catalunya</p>
-                                <p data-en="Bachelor’s thesis (9.5/10). I built a real-time computer vision and ROS 2 system to control a TurtleBot3 with hand gestures and evaluated it across 600 trials.">Treball de fi de grau (9,5/10). Vaig desenvolupar un sistema de visió per computador i ROS 2 per controlar un TurtleBot3 en temps real amb gestos de la mà i el vaig avaluar amb 600 proves.</p>
-                                <a class="cv-link" href="../projectes/#robotica" data-en="See the robotics project →">Veure el projecte de robòtica →</a>
-                            </div>
-                        </section>
-                    </div>
-
-                    <div class="cv-aside">
-                        <section class="cv-section" aria-labelledby="cv-skills">
-                            <h3 id="cv-skills" data-en="Technical skills">Competències tècniques</h3>
-                            <dl class="cv-facts">
-                                <dt data-en="Computer vision and deep learning">Visió per computador i aprenentatge profund</dt>
-                                <dd>PyTorch, OpenCV, Vision Transformers, CNN, transfer learning</dd>
-                                <dt data-en="Research computing">Computació per a la recerca</dt>
-                                <dd>Linux, SSH, SLURM, MareNostrum, BOADA, Docker</dd>
-                                <dt data-en="Programming and engineering">Programació i enginyeria</dt>
-                                <dd>Python, C++, SQL, MATLAB, Git, ROS 2</dd>
-                            </dl>
-                        </section>
-
-                        <section class="cv-section" aria-labelledby="cv-languages">
-                            <h3 id="cv-languages" data-en="Languages">Idiomes</h3>
-                            <ul class="cv-languages">
-                                <li data-en="Catalan and Spanish · Native">Català i castellà · Natius</li>
-                                <li data-en="English · Advanced professional">Anglès · Professional avançat</li>
-                                <li data-en="German · Basic">Alemany · Bàsic</li>
-                            </ul>
-                        </section>
-
-                    </div>
-                </div>
-            </article>
-        </div>
+                <section aria-labelledby="cv-overview-education">
+                    <h3 id="cv-overview-education" data-en="Education">Formació</h3>
+                    <ul class="cv-overview-list">
+                        <li>
+                            <p class="cv-overview-name" data-en="MSc in Computer Vision">Màster en Visió per Computador</p>
+                            <p data-en="UAB, UB, UPC, UPF and UOC · 2026–present">UAB, UB, UPC, UPF i UOC · 2026–actualitat</p>
+                        </li>
+                        <li>
+                            <p class="cv-overview-name" data-en="BSc in Artificial Intelligence">Grau en Intel·ligència Artificial</p>
+                            <p>Universitat Politècnica de Catalunya · 2022–2026</p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </section>
     </main>
     <footer class="site-footer">
         <div class="container footer-layout">
             <p>© 2026 Jaume Mora i Ladària</p>
             <div class="footer-links">
-                <a href="https://www.linkedin.com/in/jaumemil">LinkedIn</a>
-                <a href="https://github.com/JaumeMiL">GitHub</a>
-                <a href="/proposta/sobre-mi/#contacte" data-en="Contact">Contacte</a>
+                <a class="social-link social-linkedin" href="https://www.linkedin.com/in/jaumemil"><img src="/proposta/logos/linkedin.svg" width="17" height="17" alt="">LinkedIn</a>
+                <a class="social-link social-github" href="https://github.com/JaumeMiL"><img src="/proposta/logos/github.svg" width="17" height="17" alt="">GitHub</a>
+                <a href="/proposta/contacte/" data-en="Contact">Contacte</a>
                 <a href="/" data-en="Current website">Web actual</a>
             </div>
         </div>

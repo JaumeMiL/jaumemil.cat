@@ -49,14 +49,28 @@ themeToggle.addEventListener('click', () => {
     }
 });
 
-const pdfPreview = document.querySelector('[data-pdf-preview]');
-if (pdfPreview) {
-    pdfPreview.hidden = false;
-    pdfPreview.addEventListener('toggle', () => {
-        if (!pdfPreview.open || pdfPreview.querySelector('iframe')) return;
-        const pdf = document.createElement('iframe');
-        pdf.title = english ? 'Jaume Mora i Ladària’s CV in PDF format' : 'CV de Jaume Mora i Ladària en PDF';
-        pdf.src = document.querySelector('[data-cv-pdf]').href;
-        pdfPreview.append(pdf);
-    });
+const menuToggle = document.querySelector('[data-menu-toggle]');
+const siteHeader = menuToggle.closest('.site-header');
+const siteNav = document.getElementById(menuToggle.getAttribute('aria-controls'));
+
+function setMenuOpen(open) {
+    siteHeader.dataset.menuOpen = String(open);
+    menuToggle.setAttribute('aria-expanded', String(open));
 }
+
+setMenuOpen(false);
+menuToggle.hidden = false;
+menuToggle.addEventListener('click', () => {
+    const open = siteHeader.dataset.menuOpen === 'false';
+    setMenuOpen(open);
+    if (open) siteNav.querySelector('a').focus();
+});
+siteHeader.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && siteHeader.dataset.menuOpen === 'true') {
+        setMenuOpen(false);
+        menuToggle.focus();
+    }
+});
+document.addEventListener('click', (event) => {
+    if (!siteHeader.contains(event.target)) setMenuOpen(false);
+});

@@ -7,25 +7,28 @@
     <meta name="robots" content="noindex">
     <title data-en="Jaume Mora i Ladària — Computer vision">Jaume Mora i Ladària — Visió per computador</title>
     <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="64x64">
-    <link rel="stylesheet" href="site.css?v=2">
-    <script src="site.js" defer></script>
+    <link rel="stylesheet" href="site.css?v=3">
+    <script src="site.js?v=3" defer></script>
 </head>
 <body data-page="inici">
     <a class="skip-link" href="#contingut" data-en="Skip to content">Ves al contingut</a>
     <header class="site-header">
         <div class="container nav-layout">
-            <a class="brand" href="/proposta/"><img src="/assets/favicon.png" width="34" height="34" alt="">Jaume</a>
-            <nav class="site-nav" aria-label="Navegació principal" data-en-label="Main navigation">
-                <a href="/proposta/" aria-current="page" data-en="Home">Inici</a>
-                <a href="/proposta/projectes/" data-en="Projects">Projectes</a>
+            <a class="brand" href="/proposta/" aria-current="page">Jaume</a>
+            <nav class="site-nav" id="navegacio" aria-label="Navegació principal" data-en-label="Main navigation">
                 <a href="/proposta/sobre-mi/" data-en="About">Sobre mi</a>
-                <a href="/proposta/cv/" data-en="CV">CV</a>
+                <a href="/proposta/projectes/" data-en="Projects">Projectes</a>
+                <a href="/proposta/contacte/" data-en="Contact">Contacte</a>
             </nav>
             <div class="nav-controls">
                 <a class="nav-control" href="?lang=en" hreflang="en" lang="en" aria-label="Read in English" data-en-label="Llegeix en català" data-language-toggle data-en="CAT" hidden>EN</a>
                 <button class="nav-control" type="button" aria-label="Mode fosc" data-en-label="Dark mode" data-theme-toggle hidden>
                     <svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.8 15.2A9 9 0 0 1 8.8 3.2 9 9 0 1 0 20.8 15.2Z"/></svg>
                     <svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M19 5l-1.4 1.4M6.4 17.6 5 19"/></svg>
+                </button>
+                <a class="button button-primary nav-cv" href="/proposta/cv/">CV</a>
+                <button class="nav-control" type="button" data-menu-toggle aria-expanded="false" aria-controls="navegacio" aria-label="Menú" data-en-label="Menu" hidden>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
                 </button>
             </div>
         </div>
@@ -34,30 +37,30 @@
         <section class="hero container" aria-labelledby="nom">
             <div class="hero-copy">
                 <p class="eyebrow hero-kicker"><span></span><span data-en="Computer vision · Applied research">Visió per computador · Recerca aplicada</span></p>
-                <h1 id="nom">Jaume Mora<br><em>i Ladària</em></h1>
+                <h1 id="nom">Jaume <span>Mora i Ladària</span></h1>
                 <p class="hero-intro" data-en="I’m an AI graduate from UPC and a master’s student in Computer Vision. I’m especially interested in medical imaging and how to evaluate models in clinical settings.">Soc graduat en Intel·ligència Artificial per la UPC i faig el Màster en Visió per Computador. M’interessa sobretot la imatge mèdica i com avaluar models en contextos clínics.</p>
                 <div class="button-group">
                     <a class="button button-primary" href="projectes/"><span data-en="Explore my projects">Explora els projectes</span><span aria-hidden="true">↗</span></a>
                     <a class="button button-secondary" href="cv/"><span data-en="Read my CV">Consulta el CV</span><span aria-hidden="true">→</span></a>
                 </div>
-                <div class="hero-links">
-                    <a href="https://www.linkedin.com/in/jaumemil">LinkedIn</a>
-                    <a href="https://github.com/JaumeMiL">GitHub</a>
-                    <a href="mailto:moraladariajaume@gmail.com" data-en="Email">Correu electrònic</a>
+                <div class="social-links hero-links">
+                    <a class="social-link social-linkedin" href="https://www.linkedin.com/in/jaumemil"><img src="/proposta/logos/linkedin.svg" width="17" height="17" alt="">LinkedIn</a>
+                    <a class="social-link social-github" href="https://github.com/JaumeMiL"><img src="/proposta/logos/github.svg" width="17" height="17" alt="">GitHub</a>
+                    <a class="social-link" href="mailto:moraladariajaume@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><span data-en="Email">Correu</span></a>
                 </div>
             </div>
             <figure class="hero-portrait">
                 <div class="portrait-media">
                     <img src="retrat.webp" width="800" height="835" alt="Jaume Mora i Ladària" fetchpriority="high">
                     <span class="portrait-box" aria-hidden="true">
-                        <span class="portrait-label">Jaume</span>
                         <span class="portrait-corner top-left"></span>
                         <span class="portrait-corner top-right"></span>
                         <span class="portrait-corner bottom-left"></span>
                         <span class="portrait-corner bottom-right"></span>
                     </span>
+                    <span class="portrait-detection">100% JAUME</span>
                 </div>
-                <figcaption><span>JAUME MORA I LADÀRIA</span><span>BARCELONA</span></figcaption>
+                <figcaption><span>Jaume Mora i Ladària</span><span>Barcelona</span></figcaption>
             </figure>
         </section>
 
@@ -100,16 +103,14 @@
         <section class="container home-organizations" aria-labelledby="trajectoria">
             <div class="section-heading">
                 <div>
-                    <p class="eyebrow" data-en="02 / Background">02 / Trajectòria</p>
-                    <h2 id="trajectoria" data-en="Where I’ve studied and worked">On he estudiat i treballat</h2>
+                    <h2 id="trajectoria" data-en="Education and experience">Trajectòria</h2>
                 </div>
                 <a class="text-link" href="cv/"><span data-en="See my experience">Veure la trajectòria</span><span aria-hidden="true">↗</span></a>
             </div>
             <ul class="organization-list" role="list">
                 <li><span class="organization-mark"><img src="logos/upc.svg" width="567" height="170" alt="" loading="lazy"></span><span>Universitat Politècnica de Catalunya</span></li>
-                <li><span class="organization-mark"><img src="logos/uib.png" width="828" height="264" alt="" loading="lazy"></span><span>SCOPIA · Universitat de les Illes Balears</span></li>
                 <li><span class="organization-mark organization-mark-inverse"><img src="logos/son-espases.png" width="356" height="87" alt="" loading="lazy"></span><span>Hospital Universitari Son Espases</span></li>
-                <li><span class="organization-mark"><img src="logos/outlier.svg" width="838" height="214" alt="" loading="lazy"></span><span>Outlier</span></li>
+                <li><span class="organization-mark organization-mark-outlier"><img src="logos/outlier.svg" width="838" height="214" alt="" loading="lazy"></span><span>Outlier</span></li>
             </ul>
         </section>
 
@@ -119,16 +120,16 @@
                 <h2 id="parlem" data-en="Let’s talk research.">Parlem de recerca.</h2>
                 <p data-en="I’m open to research placements and internships in computer vision and applied AI.">Estic obert a estades de recerca i pràctiques en visió per computador i IA aplicada.</p>
             </div>
-            <a class="button button-primary" href="sobre-mi/#contacte"><span data-en="Get in touch">Contacta amb mi</span><span aria-hidden="true">↗</span></a>
+            <a class="button button-primary" href="contacte/"><span data-en="Get in touch">Contacta amb mi</span><span aria-hidden="true">↗</span></a>
         </section>
     </main>
     <footer class="site-footer">
         <div class="container footer-layout">
             <p>© 2026 Jaume Mora i Ladària</p>
             <div class="footer-links">
-                <a href="https://www.linkedin.com/in/jaumemil">LinkedIn</a>
-                <a href="https://github.com/JaumeMiL">GitHub</a>
-                <a href="/proposta/sobre-mi/#contacte" data-en="Contact">Contacte</a>
+                <a class="social-link social-linkedin" href="https://www.linkedin.com/in/jaumemil"><img src="/proposta/logos/linkedin.svg" width="17" height="17" alt="">LinkedIn</a>
+                <a class="social-link social-github" href="https://github.com/JaumeMiL"><img src="/proposta/logos/github.svg" width="17" height="17" alt="">GitHub</a>
+                <a href="/proposta/contacte/" data-en="Contact">Contacte</a>
                 <a href="/" data-en="Current website">Web actual</a>
             </div>
         </div>
